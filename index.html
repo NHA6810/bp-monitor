@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>血压记录管理</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        const BAIDU_OCR_CONFIG = { apiKey: 'rA6db0H2JPOBq98twAscviwp', secretKey: 'D1rOOK7S769YZM2WMMqa0C2diBTifqoS' };
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F5F0EB; color: #3D2C2C; min-height: 100vh; }
+        .header { background: linear-gradient(135deg, #F4735C, #E85D4A); color: white; padding: 20px; padding-top: 50px; text-align: center; }
+        .header h1 { font-size: 24px; font-weight: 700; }
+        .header p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
+        .sync-btn { display: inline-block; margin-top: 10px; padding: 8px 20px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; color: white; font-size: 13px; cursor: pointer; }
+        .tabs { display: flex; background: white; border-bottom: 1px solid #E8E0DA; position: sticky; top: 0; z-index: 100; }
+        .tab { flex: 1; padding: 14px; text-align: center; font-size: 14px; font-weight: 500; color: #8B7355; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab.active { color: #F4735C; border-bottom-color: #F4735C; }
+        .content { padding: 16px; padding-bottom: 80px; }
+        .card { background: white; border-radius: 16px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(244,115,92,0.08); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .card-date { font-size: 18px; font-weight: 700; color: #3D2C2C; }
+        .card-time { font-size: 14px; color: #8B7355; }
+        .status-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .status-normal { background: #E8F5E9; color: #2E7D32; }
+        .status-high { background: #FFF3E0; color: #E65100; }
+        .status-danger { background: #FFEBEE; color: #C62828; }
+        .bp-values { display: flex; justify-content: space-around; margin: 16px 0; }
+        .bp-item { text-align: center; }
+        .bp-label { font-size: 12px; color: #8B7355; margin-bottom: 4px; }
+        .bp-value { font-size: 28px; font-weight: 700; }
+        .bp-unit { font-size: 11px; color: #8B7355; }
+        .bp-systolic { color: #F4735C; }
+        .bp-diastolic { color: #2A9D8F; }
+        .bp-pulse { color: #E9A820; }
+        .bp-diff { color: #9C27B0; }
+        .card-actions { display: flex; justify-content: flex-end; gap: 12px; padding-top: 12px; border-top: 1px solid #F0EBE6; }
+        .action-btn { padding: 6px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; border: none; display: flex; align-items: center; gap: 4px; }
+        .btn-edit { background: #FFF3E0; color: #E65100; }
+        .btn-note { background: #F3E5F5; color: #7B1FA2; }
+        .btn-delete { background: #FFEBEE; color: #C62828; }
+        .note-display { background: #F3E5F5; padding: 10px 14px; border-radius: 10px; margin-top: 12px; font-size: 13px; color: #7B1FA2; }
+        .fab { position: fixed; bottom: 30px; right: 30px; width: 56px; height: 56px; border-radius: 50%; background: #F4735C; color: white; border: none; font-size: 28px; cursor: pointer; box-shadow: 0 4px 12px rgba(244,115,92,0.4); display: flex; align-items: center; justify-content: center; z-index: 200; }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 300; display: flex; align-items: flex-end; justify-content: center; }
+        .modal { background: white; border-radius: 20px 20px 0 0; padding: 24px; width: 100%; max-width: 500px; max-height: 85vh; overflow-y: auto; }
+        .modal-title { font-size: 20px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+        .form-group { margin-bottom: 16px; }
+        .form-label { font-size: 14px; font-weight: 600; color: #3D2C2C; margin-bottom: 6px; display: block; }
+        .form-input { width: 100%; padding: 12px 16px; border: 2px solid #F0EBE6; border-radius: 12px; font-size: 16px; background: #FAF7F4; color: #3D2C2C; }
+        .form-input:focus { outline: none; border-color: #F4735C; }
+        .form-row { display: flex; gap: 12px; }
+        .form-row .form-group { flex: 1; }
+        .btn-primary { width: 100%; padding: 14px; background: #F4735C; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; }
+        .btn-secondary { width: 100%; padding: 14px; background: #F0EBE6; color: #8B7355; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 10px; }
+        .camera-area { text-align: center; padding: 30px 20px; }
+        .camera-btn { padding: 16px 32px; background: #F4735C; color: white; border: none; border-radius: 14px; font-size: 16px; font-weight: 600; cursor: pointer; margin: 10px; display: inline-block; }
+        .camera-preview { max-width: 100%; border-radius: 12px; margin: 16px 0; max-height: 300px; object-fit: contain; }
+        .result-card { background: #FAF7F4; border-radius: 14px; padding: 20px; margin: 16px 0; }
+        .result-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #F0EBE6; }
+        .result-row:last-child { border-bottom: none; }
+        .result-input { width: 80px; padding: 8px; border: 2px solid #F0EBE6; border-radius: 8px; font-size: 18px; font-weight: 700; text-align: center; }
+        .result-input:focus { outline: none; border-color: #F4735C; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        .stat-card { background: #FAF7F4; border-radius: 12px; padding: 16px; text-align: center; }
+        .stat-value { font-size: 24px; font-weight: 700; color: #F4735C; }
+        .stat-label { font-size: 12px; color: #8B7355; margin-top: 4px; }
+        .chart-container { position: relative; height: 250px; margin: 20px 0; }
+        .date-range { display: flex; gap: 12px; margin-bottom: 20px; }
+        .date-range input { flex: 1; padding: 10px; border: 2px solid #F0EBE6; border-radius: 10px; font-size: 14px; }
+        .export-btns { display: flex; gap: 12px; margin-top: 16px; }
+        .export-btns button { flex: 1; padding: 12px; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
+        .btn-email { background: #E3F2FD; color: #1565C0; }
+        .btn-share { background: #E8F5E9; color: #2E7D32; }
+        .empty-state { text-align: center; padding: 60px 20px; color: #8B7355; }
+        .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+        .hidden { display: none !important; }
+        .loading { text-align: center; padding: 20px; color: #8B7355; }
+        .loading-spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #F0EBE6; border-top-color: #F4735C; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .analysis-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .analysis-table th, .analysis-table td { padding: 12px; text-align: left; border-bottom: 1px solid #F0EBE6; }
+        .analysis-table th { font-size: 13px; color: #8B7355; font-weight: 600; }
+        .analysis-table td { font-size: 15px; color: #3D2C2C; }
+        .ocr-tip { background: #FFF3E0; padding: 12px; border-radius: 10px; font-size: 13px; color: #E65100; margin: 12px 0; text-align: left; }
+        .progress-bar { width: 100%; height: 6px; background: #F0EBE6; border-radius: 3px; overflow: hidden; margin: 10px 0; }
+        .progress-fill { height: 100%; background: #F4735C; transition: width 0.3s; border-radius: 3px; }
+        .rotate-btns { display: flex; gap: 10px; justify-content: center; margin: 12px 0; }
+        .rotate-btn { padding: 10px 20px; background: #F0EBE6; color: #8B7355; border: none; border-radius: 10px; font-size: 14px; cursor: pointer; }
+        canvas#processing-canvas { display: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🩺 血压记录管理</h1>
+        <p>记录 · 分析 · 健康</p>
+        <div class="sync-btn" onclick="openSyncModal()">🔄 数据同步</div>
+    </div>
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('list', this)"> 数据</div>
+        <div class="tab" onclick="switchTab('camera', this)"> 拍照</div>
+        <div class="tab" onclick="switchTab('analysis', this)">📊 分析</div>
+    </div>
+    <div id="tab-list" class="content"><div id="readings-list"></div><button class="fab" onclick="openAddModal()">+</button></div>
+    <div id="tab-camera" class="content hidden">
+        <div class="card"><div class="camera-area">
+            <p style="margin-bottom:20px;color:#8B7355;">拍摄血压计照片，自动识别读数</p>
+            <input type="file" id="camera-input" accept="image/*" capture="environment" style="display:none" onchange="handleImageCapture(event)">
+            <input type="file" id="gallery-input" accept="image/*" style="display:none" onchange="handleImageCapture(event)">
+            <button class="camera-btn" onclick="document.getElementById('camera-input').click()">📷 拍摄血压计</button>
+            <button class="camera-btn" style="background:#2A9D8F" onclick="document.getElementById('gallery-input').click()">🖼️ 从相册选择</button>
+        </div><div class="ocr-tip">💡 <strong>拍照技巧：</strong>确保光线充足，血压计数字清晰可见，尽量正对屏幕拍摄</div></div>
+        <div id="camera-result" class="hidden"><div class="card">
+            <img id="camera-preview" class="camera-preview" src="" alt="预览">
+            <div class="rotate-btns"><button class="rotate-btn" onclick="rotateImage(-90)">↺ 左转</button><button class="rotate-btn" onclick="rotateImage(90)">↻ 右转</button><button class="rotate-btn" onclick="reOCR()">🔄 重新识别</button></div>
+            <div id="ocr-progress" class="hidden"><div class="loading"><div class="loading-spinner"></div></div><p style="text-align:center;margin:10px 0;">正在识别中...</p><div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div><p id="progress-text" style="text-align:center;font-size:12px;color:#8B7355;"></p></div>
+            <div id="camera-data" class="hidden"><h3 style="margin:16px 0 12px;">识别结果（可手动修改）</h3>
+                <div class="result-card">
+                    <div class="result-row"><span>收缩压 (高压)</span><input type="number" id="res-systolic" class="result-input bp-systolic" placeholder="120"><span style="font-size:12px;color:#8B7355">mmHg</span></div>
+                    <div class="result-row"><span>舒张压 (低压)</span><input type="number" id="res-diastolic" class="result-input bp-diastolic" placeholder="80"><span style="font-size:12px;color:#8B7355">mmHg</span></div>
+                    <div class="result-row"><span>脉搏</span><input type="number" id="res-pulse" class="result-input bp-pulse" placeholder="72"><span style="font-size:12px;color:#8B7355">bpm</span></div>
+                </div>
+                <button class="btn-primary" onclick="saveCameraReading()">💾 保存记录</button><button class="btn-secondary" onclick="resetCamera()"> 重新拍照</button>
+            </div>
+        </div></div>
+        <canvas id="processing-canvas"></canvas>
+    </div>
+    <div id="tab-analysis" class="content hidden">
+        <div class="card"><h3 style="margin-bottom:16px;"> 选择日期范围</h3><div class="date-range"><input type="date" id="start-date" onchange="loadAnalysis()"><input type="date" id="end-date" onchange="loadAnalysis()"></div></div>
+        <div id="analysis-content"></div>
+    </div>
+    <div id="edit-modal" class="modal-overlay hidden" onclick="if(event.target===this)closeModal()"><div class="modal">
+        <div class="modal-title" id="modal-title">新增记录</div>
+        <div class="form-row"><div class="form-group"><label class="form-label">日期</label><input type="date" id="edit-date" class="form-input"></div><div class="form-group"><label class="form-label">时间</label><input type="time" id="edit-time" class="form-input"></div></div>
+        <div class="form-row"><div class="form-group"><label class="form-label">收缩压 (mmHg)</label><input type="number" id="edit-systolic" class="form-input" placeholder="120"></div><div class="form-group"><label class="form-label">舒张压 (mmHg)</label><input type="number" id="edit-diastolic" class="form-input" placeholder="80"></div></div>
+        <div class="form-group"><label class="form-label">脉搏 (bpm)</label><input type="number" id="edit-pulse" class="form-input" placeholder="72"></div>
+        <div class="form-group"><label class="form-label">说明（可选）</label><input type="text" id="edit-note" class="form-input" placeholder="如：晨起空腹、运动后"></div>
+        <button class="btn-primary" onclick="saveReading()">保存</button><button class="btn-secondary" onclick="closeModal()">取消</button>
+    </div></div>
+    <div id="note-modal" class="modal-overlay hidden" onclick="if(event.target===this)closeNoteModal()"><div class="modal">
+        <div class="modal-title"> 测量说明</div>
+        <div class="form-group"><label class="form-label">记录测量时的具体情况</label><input type="text" id="note-text" class="form-input" placeholder="如：晨起空腹、早餐后、运动后、服药后..."></div>
+        <p style="font-size:12px;color:#8B7355;margin-bottom:16px;">💡 记录测量时的状态有助于医生更准确地评估您的血压情况</p>
+        <button class="btn-primary" onclick="saveNote()">保存</button><button class="btn-secondary" onclick="closeNoteModal()">取消</button>
+    </div></div>
+    <div id="sync-modal" class="modal-overlay hidden" onclick="if(event.target===this)closeSyncModal()"><div class="modal">
+        <div class="modal-title"> 数据同步</div>
+        <div class="form-group"><label class="form-label">GitHub Token</label><input type="password" id="github-token" class="form-input" placeholder="ghp_xxxxxxxxxxxx"></div>
+        <p style="font-size:12px;color:#8B7355;margin-bottom:16px;">💡 Token 用于访问 GitHub 仓库，不会上传到任何服务器</p>
+        <button class="btn-primary" onclick="syncToGitHub()" style="margin-bottom:10px;">⬆️ 上传到 GitHub</button>
+        <button class="btn-primary" onclick="syncFromGitHub()" style="background:#2A9D8F;margin-bottom:10px;">⬇️ 从 GitHub 恢复</button>
+        <button class="btn-secondary" onclick="closeSyncModal()">取消</button>
+    </div></div>
+    <script>
+        let readings = [];
+        let editingId = null, noteItemId = null, chartInstance = null, currentRotation = 0, currentImageData = null;
+
+        async function loadOriginalData() {
+            try {
+                const resp = await fetch('data.json');
+                if (resp.ok) { const data = await resp.json(); if (data.length > 0) { readings = data; localStorage.setItem('bp_readings', JSON.stringify(readings)); localStorage.setItem('bp_data_version', '1.0'); return true; } }
+            } catch (e) { console.error('加载原始数据失败:', e); }
+            return false;
+        }
+
+        async function init() {
+            const savedData = localStorage.getItem('bp_readings');
+            if (savedData) {
+                // 本地有数据，优先使用本地数据
+                readings = JSON.parse(savedData);
+            } else {
+                // 本地没有数据，从 GitHub 加载原始数据
+                const loaded = await loadOriginalData();
+                if (!loaded) readings = [];
+            }
+            renderList();
+            const now = new Date(); const today = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'); const weekAgoDate = new Date(now.getTime() - 7*24*60*60*1000); const weekAgo = weekAgoDate.getFullYear() + '-' + String(weekAgoDate.getMonth()+1).padStart(2,'0') + '-' + String(weekAgoDate.getDate()).padStart(2,'0');
+            document.getElementById('start-date').value = weekAgo;
+            document.getElementById('end-date').value = today;
+        }
+
+        function saveData() { localStorage.setItem('bp_readings', JSON.stringify(readings)); localStorage.setItem('bp_data_version', '1.0'); }
+        function switchTab(tab, el) { document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.content').forEach(c => c.classList.add('hidden')); el.classList.add('active'); document.getElementById('tab-' + tab).classList.remove('hidden'); if (tab === 'analysis') loadAnalysis(); }
+        function getStatus(s, d) { if (s >= 140 || d >= 90) return { label: '偏高', class: 'status-danger' }; if (s >= 130 || d >= 85) return { label: '正常高值', class: 'status-high' }; return { label: '正常', class: 'status-normal' }; }
+
+        function renderList() {
+            const list = document.getElementById('readings-list');
+            const sorted = [...readings].sort((a, b) => b.record_date.localeCompare(a.record_date) || b.record_time.localeCompare(a.record_time));
+            if (sorted.length === 0) { list.innerHTML = '<div class="empty-state"><div class="icon">📋</div><p>暂无记录</p></div>'; return; }
+            list.innerHTML = sorted.map(r => { const status = getStatus(r.systolic, r.diastolic); return `<div class="card"><div class="card-header"><div><div class="card-date">${r.record_date}</div><div class="card-time">${r.record_time}</div></div><span class="status-badge ${status.class}">${status.label}</span></div><div class="bp-values"><div class="bp-item"><div class="bp-label">收缩压</div><div class="bp-value bp-systolic">${r.systolic}</div><div class="bp-unit">mmHg</div></div><div class="bp-item"><div class="bp-label">舒张压</div><div class="bp-value bp-diastolic">${r.diastolic}</div><div class="bp-unit">mmHg</div></div><div class="bp-item"><div class="bp-label">脉搏</div><div class="bp-value bp-pulse">${r.pulse}</div><div class="bp-unit">bpm</div></div><div class="bp-item"><div class="bp-label">脉压差</div><div class="bp-value bp-diff">${r.systolic - r.diastolic}</div><div class="bp-unit">mmHg</div></div></div>${r.note ? `<div class="note-display">📝 ${r.note}</div>` : ''}<div class="card-actions"><button class="action-btn btn-edit" onclick="openEditModal(${r.id})">✏️ 编辑</button><button class="action-btn btn-note" onclick="openNoteModal(${r.id})">📝 说明</button><button class="action-btn btn-delete" onclick="deleteReading(${r.id})">🗑️ 删除</button></div></div>`; }).join('');
+        }
+
+        function openAddModal() { editingId = null; document.getElementById('modal-title').textContent = '新增记录'; const now = new Date(); document.getElementById('edit-date').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'); document.getElementById('edit-time').value = now.toTimeString().slice(0, 5); document.getElementById('edit-systolic').value = ''; document.getElementById('edit-diastolic').value = ''; document.getElementById('edit-pulse').value = ''; document.getElementById('edit-note').value = ''; document.getElementById('edit-modal').classList.remove('hidden'); }
+        function openEditModal(id) { const r = readings.find(x => x.id === id); if (!r) return; editingId = id; document.getElementById('modal-title').textContent = '编辑记录'; document.getElementById('edit-date').value = r.record_date; document.getElementById('edit-time').value = r.record_time; document.getElementById('edit-systolic').value = r.systolic; document.getElementById('edit-diastolic').value = r.diastolic; document.getElementById('edit-pulse').value = r.pulse; document.getElementById('edit-note').value = r.note || ''; document.getElementById('edit-modal').classList.remove('hidden'); }
+        function closeModal() { document.getElementById('edit-modal').classList.add('hidden'); }
+        function saveReading() { const date = document.getElementById('edit-date').value; const time = document.getElementById('edit-time').value; const systolic = parseInt(document.getElementById('edit-systolic').value); const diastolic = parseInt(document.getElementById('edit-diastolic').value); const pulse = parseInt(document.getElementById('edit-pulse').value); const note = document.getElementById('edit-note').value; if (!date || !time || !systolic || !diastolic || !pulse) { alert('请填写完整数据'); return; } if (editingId) { const idx = readings.findIndex(x => x.id === editingId); if (idx >= 0) readings[idx] = { ...readings[idx], record_date: date, record_time: time, systolic, diastolic, pulse, note }; } else { const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: date, record_time: time, systolic, diastolic, pulse, note }); } saveData(); renderList(); closeModal(); }
+        function openNoteModal(id) { noteItemId = id; const r = readings.find(x => x.id === id); document.getElementById('note-text').value = r?.note || ''; document.getElementById('note-modal').classList.remove('hidden'); }
+        function closeNoteModal() { document.getElementById('note-modal').classList.add('hidden'); }
+        function saveNote() { const idx = readings.findIndex(x => x.id === noteItemId); if (idx >= 0) { readings[idx].note = document.getElementById('note-text').value; saveData(); renderList(); } closeNoteModal(); }
+        function deleteReading(id) { if (!confirm('确定要删除这条记录吗？')) return; readings = readings.filter(x => x.id !== id); saveData(); renderList(); }
+
+        function parseBPFromText(text) { let systolic = null, diastolic = null, pulse = null; const sysMatch = text.match(/(?:SYS|收缩压|高压)[\s:：]*(\d{2,3})/i); const diaMatch = text.match(/(?:DIA|舒张压|低压)[\s:：]*(\d{2,3})/i); const pulMatch = text.match(/(?:PUL|脉搏|心率)[\s:：]*(\d{2,3})/i); if (sysMatch) systolic = parseInt(sysMatch[1]); if (diaMatch) diastolic = parseInt(diaMatch[1]); if (pulMatch) pulse = parseInt(pulMatch[1]); if (!systolic || !diastolic) { const slashMatch = text.match(/(\d{2,3})\s*[/／]\s*(\d{2,3})/); if (slashMatch) { systolic = parseInt(slashMatch[1]); diastolic = parseInt(slashMatch[2]); } } if (!systolic || !diastolic) { const allNumbers = text.match(/\d{2,3}/g); if (allNumbers) { const nums = allNumbers.map(n => parseInt(n)).filter(n => n >= 60 && n <= 220); if (nums.length >= 2) { const sorted = [...nums].sort((a, b) => b - a); if (!systolic) systolic = sorted[0]; if (!diastolic) diastolic = sorted.find(n => n < systolic && n >= 40) || sorted[1]; } if (!pulse) { const pulseCandidates = nums.filter(n => n >= 40 && n <= 120 && n !== systolic && n !== diastolic); if (pulseCandidates.length > 0) pulse = pulseCandidates[0]; } } } if (systolic && (systolic < 60 || systolic > 250)) systolic = null; if (diastolic && (diastolic < 30 || diastolic > 180)) diastolic = null; if (pulse && (pulse < 30 || pulse > 200)) pulse = null; return { systolic, diastolic, pulse }; }
+
+        async function doOCR(imageDataUrl, rotation) { document.getElementById('progress-text').textContent = '正在获取识别令牌...'; document.getElementById('progress-fill').style.width = '30%'; try { const tokenUrl = `https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=${BAIDU_OCR_CONFIG.apiKey}&client_secret=${BAIDU_OCR_CONFIG.secretKey}`; const tokenResp = await fetch(tokenUrl); const tokenData = await tokenResp.json(); if (!tokenData.access_token) throw new Error('获取令牌失败'); document.getElementById('progress-text').textContent = '正在识别图片...'; document.getElementById('progress-fill').style.width = '60%'; const ocrUrl = `https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic?access_token=${tokenData.access_token}`; const base64Image = imageDataUrl.split(',')[1]; const ocrResp = await fetch(ocrUrl, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `image=${encodeURIComponent(base64Image)}&language_type=CHN_ENG&detect_direction=true` }); const ocrData = await ocrResp.json(); document.getElementById('progress-fill').style.width = '100%'; if (ocrData.words_result) { const text = ocrData.words_result.map(item => item.words).join('\n'); console.log('百度 OCR:', text); const parsed = parseBPFromText(text); showOCRResult(parsed); } else throw new Error(ocrData.error_msg || '识别失败'); } catch (err) { console.error('OCR 错误:', err); alert('⚠️ 识别失败：' + err.message); showOCRResult({ systolic: null, diastolic: null, pulse: null }); } }
+
+        async function handleImageCapture(event) { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = function(e) { currentImageData = e.target.result; currentRotation = 0; document.getElementById('camera-preview').src = e.target.result; document.getElementById('camera-result').classList.remove('hidden'); document.getElementById('ocr-progress').classList.remove('hidden'); document.getElementById('camera-data').classList.add('hidden'); doOCR(e.target.result, 0); }; reader.readAsDataURL(file); event.target.value = ''; }
+
+        function showOCRResult(parsed) { document.getElementById('ocr-progress').classList.add('hidden'); document.getElementById('camera-data').classList.remove('hidden'); document.getElementById('res-systolic').value = parsed.systolic || ''; document.getElementById('res-diastolic').value = parsed.diastolic || ''; document.getElementById('res-pulse').value = parsed.pulse || ''; if (!parsed.systolic && !parsed.diastolic) alert('⚠️ 未能自动识别，请手动输入数值。'); }
+
+        function rotateImage(deg) { currentRotation = (currentRotation + deg + 360) % 360; const img = new Image(); img.onload = function() { const canvas = document.getElementById('processing-canvas'); const ctx = canvas.getContext('2d'); if (currentRotation === 90 || currentRotation === 270) { canvas.width = img.naturalHeight; canvas.height = img.naturalWidth; } else { canvas.width = img.naturalWidth; canvas.height = img.naturalHeight; } ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.save(); ctx.translate(canvas.width / 2, canvas.height / 2); ctx.rotate(currentRotation * Math.PI / 180); ctx.drawImage(img, -img.naturalWidth / 2, -img.naturalHeight / 2); ctx.restore(); const rotatedData = canvas.toDataURL('image/jpeg', 0.9); document.getElementById('camera-preview').src = rotatedData; document.getElementById('ocr-progress').classList.remove('hidden'); document.getElementById('camera-data').classList.add('hidden'); doOCR(rotatedData, currentRotation); }; img.src = currentImageData; }
+
+        function reOCR() { if (!currentImageData) return; document.getElementById('ocr-progress').classList.remove('hidden'); document.getElementById('camera-data').classList.add('hidden'); doOCR(currentImageData, currentRotation); }
+        function resetCamera() { document.getElementById('camera-result').classList.add('hidden'); document.getElementById('camera-data').classList.add('hidden'); document.getElementById('ocr-progress').classList.add('hidden'); currentImageData = null; currentRotation = 0; }
+
+        function saveCameraReading() { const systolic = parseInt(document.getElementById('res-systolic').value); const diastolic = parseInt(document.getElementById('res-diastolic').value); const pulse = parseInt(document.getElementById('res-pulse').value); if (!systolic || !diastolic || !pulse) { alert('请填写完整的血压数据'); return; } const now = new Date(); const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'), record_time: now.toTimeString().slice(0, 5), systolic, diastolic, pulse, note: '' }); saveData(); alert('✅ 保存成功！'); resetCamera(); document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.content').forEach(c => c.classList.add('hidden')); document.querySelectorAll('.tab')[0].classList.add('active'); document.getElementById('tab-list').classList.remove('hidden'); renderList(); }
+
+        function loadAnalysis() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; if (!startDate || !endDate) return; const filtered = readings.filter(r => r.record_date >= startDate && r.record_date <= endDate).sort((a, b) => a.record_date.localeCompare(b.record_date) || a.record_time.localeCompare(b.record_time)); if (filtered.length === 0) { document.getElementById('analysis-content').innerHTML = '<div class="empty-state"><div class="icon">📊</div><p>该日期范围内暂无数据</p></div>'; return; } const avgSys = Math.round(filtered.reduce((s, r) => s + r.systolic, 0) / filtered.length); const avgDia = Math.round(filtered.reduce((s, r) => s + r.diastolic, 0) / filtered.length); const avgPul = Math.round(filtered.reduce((s, r) => s + r.pulse, 0) / filtered.length); let html = `<div class="card"><h3 style="margin-bottom:16px;"> 统计概览</h3><div class="stats-grid"><div class="stat-card"><div class="stat-value">${filtered.length}</div><div class="stat-label">记录次数</div></div><div class="stat-card"><div class="stat-value">${avgSys}/${avgDia}</div><div class="stat-label">平均血压</div></div><div class="stat-card"><div class="stat-value">${Math.max(...filtered.map(r=>r.systolic))}</div><div class="stat-label">最高收缩压</div></div><div class="stat-card"><div class="stat-value">${Math.min(...filtered.map(r=>r.systolic))}</div><div class="stat-label">最低收缩压</div></div><div class="stat-card"><div class="stat-value">${Math.round(filtered.reduce((s, r) => s + (r.systolic - r.diastolic), 0) / filtered.length)}</div><div class="stat-label">平均脉压差</div></div></div></div><div class="card"><h3 style="margin-bottom:16px;">📊 详细分析</h3><table class="analysis-table"><tr><th>指标</th><th>单位</th><th>平均值</th><th>最高/最低</th></tr><tr><td>收缩压</td><td>mmHg</td><td>${avgSys}</td><td>${Math.max(...filtered.map(r=>r.systolic))}/${Math.min(...filtered.map(r=>r.systolic))}</td></tr><tr><td>舒张压</td><td>mmHg</td><td>${avgDia}</td><td>${Math.max(...filtered.map(r=>r.diastolic))}/${Math.min(...filtered.map(r=>r.diastolic))}</td></tr><tr><td>脉搏</td><td>bpm</td><td>${avgPul}</td><td>${Math.max(...filtered.map(r=>r.pulse))}/${Math.min(...filtered.map(r=>r.pulse))}</td></tr><tr><td>脉压差</td><td>mmHg</td><td>${Math.round(filtered.reduce((s, r) => s + (r.systolic - r.diastolic), 0) / filtered.length)}</td><td>${Math.max(...filtered.map(r=>r.systolic-r.diastolic))}/${Math.min(...filtered.map(r=>r.systolic-r.diastolic))}</td></tr></table></div><div class="card"><h3 style="margin-bottom:16px;">📈 趋势图</h3><div class="chart-container"><canvas id="trendChart"></canvas></div></div><div class="card"><h3 style="margin-bottom:16px;">📤 导出报表</h3><div class="export-btns"><button class="btn-email" onclick="sendEmail()">📧 邮件发送</button><button class="btn-share" onclick="shareFile()">📤 分享/下载</button></div></div>`; document.getElementById('analysis-content').innerHTML = html; setTimeout(() => { const ctx = document.getElementById('trendChart'); if (ctx && typeof Chart !== 'undefined') { if (chartInstance) chartInstance.destroy(); chartInstance = new Chart(ctx, { type: 'line', data: { labels: filtered.map(r => r.record_date.slice(5)), datasets: [{ label: '收缩压', data: filtered.map(r => r.systolic), borderColor: '#F4735C', backgroundColor: 'rgba(244,115,92,0.1)', tension: 0.3, fill: true }, { label: '舒张压', data: filtered.map(r => r.diastolic), borderColor: '#2A9D8F', backgroundColor: 'rgba(42,157,143,0.1)', tension: 0.3, fill: true }, { label: '脉搏', data: filtered.map(r => r.pulse), borderColor: '#E9A820', backgroundColor: 'rgba(233,168,32,0.1)', tension: 0.3, fill: true }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } } }); } }, 100); }
+
+        function generateExcelBlob() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; const filtered = readings.filter(r => r.record_date >= startDate && r.record_date <= endDate).sort((a, b) => a.record_date.localeCompare(b.record_date) || a.record_time.localeCompare(b.record_time)); const wb = XLSX.utils.book_new(); const data = filtered.map((r, i) => ({ '序号': i + 1, '日期': r.record_date, '时间': r.record_time, '收缩压(mmHg)': r.systolic, '舒张压(mmHg)': r.diastolic, '脉搏(bpm)': r.pulse, '状态评估': getStatus(r.systolic, r.diastolic).label, '说明': r.note || '' })); const ws1 = XLSX.utils.json_to_sheet(data); XLSX.utils.book_append_sheet(wb, ws1, '血压数据'); const avgSys = Math.round(filtered.reduce((s, r) => s + r.systolic, 0) / filtered.length); const avgDia = Math.round(filtered.reduce((s, r) => s + r.diastolic, 0) / filtered.length); const avgPul = Math.round(filtered.reduce((s, r) => s + r.pulse, 0) / filtered.length); const statsData = [['指标','单位','平均值','最高','最低'],['收缩压','mmHg',avgSys,Math.max(...filtered.map(r=>r.systolic)),Math.min(...filtered.map(r=>r.systolic))],['舒张压','mmHg',avgDia,Math.max(...filtered.map(r=>r.diastolic)),Math.min(...filtered.map(r=>r.diastolic))],['脉搏','bpm',avgPul,Math.max(...filtered.map(r=>r.pulse)),Math.min(...filtered.map(r=>r.pulse))]]; const ws2 = XLSX.utils.aoa_to_sheet(statsData); XLSX.utils.book_append_sheet(wb, ws2, '数据分析'); return XLSX.write(wb, { bookType: 'xlsx', type: 'array' }); }
+
+        function sendEmail() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; const filtered = readings.filter(r => r.record_date >= startDate && r.record_date <= endDate); const excelData = generateExcelBlob(); const blob = new Blob([excelData], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `bp_report_${startDate}_${endDate}.xlsx`; a.click(); URL.revokeObjectURL(url); const avgSys = Math.round(filtered.reduce((s, r) => s + r.systolic, 0) / filtered.length); const avgDia = Math.round(filtered.reduce((s, r) => s + r.diastolic, 0) / filtered.length); const subject = encodeURIComponent(`血压记录报表 ${startDate} 至 ${endDate}`); const body = encodeURIComponent(`您好，\n\n附件是我的血压记录报表。\n\n统计期间：${startDate} 至 ${endDate}\n记录次数：${filtered.length} 次\n平均血压：${avgSys}/${avgDia} mmHg\n\n详细数据请查看附件Excel文件。`); setTimeout(() => { window.location.href = `mailto:norton.han@139.com?subject=${subject}&body=${body}`; }, 1000); alert('📥 Excel文件已开始下载\n📧 即将打开邮件应用\n\n请在邮件中添加已下载的Excel文件作为附件'); }
+
+        function shareFile() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; const excelData = generateExcelBlob(); const blob = new Blob([excelData], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }); if (navigator.share && navigator.canShare) { const file = new File([blob], `bp_report_${startDate}_${endDate}.xlsx`, { type: blob.type }); if (navigator.canShare({ files: [file] })) { navigator.share({ files: [file], title: '血压记录报表', text: `血压记录 ${startDate} 至 ${endDate}` }).catch(() => { downloadExcel(); }); return; } } downloadExcel(); }
+
+        function downloadExcel() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; const excelData = generateExcelBlob(); const blob = new Blob([excelData], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `bp_report_${startDate}_${endDate}.xlsx`; a.click(); URL.revokeObjectURL(url); alert(' Excel文件已下载，可通过微信或其他应用打开分享'); }
+
+        function openSyncModal() { document.getElementById('sync-modal').classList.remove('hidden'); const savedToken = localStorage.getItem('github_token'); if (savedToken) document.getElementById('github-token').value = savedToken; }
+        function closeSyncModal() { document.getElementById('sync-modal').classList.add('hidden'); }
+
+        async function syncToGitHub() { const token = document.getElementById('github-token').value.trim(); if (!token) { alert('请输入 GitHub Token'); return; } localStorage.setItem('github_token', token); try { const resp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } }); const data = await resp.json(); const sha = data.sha; const content = btoa(unescape(encodeURIComponent(JSON.stringify(readings, null, 2)))); const updateResp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', { method: 'PUT', headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' }, body: JSON.stringify({ message: 'sync: 从手机同步数据 ' + new Date().toISOString(), content, sha }) }); if (updateResp.ok) { alert('✅ 数据已成功上传到 GitHub！'); closeSyncModal(); } else { const err = await updateResp.json(); alert(' 上传失败：' + (err.message || '未知错误')); } } catch (err) { alert('❌ 同步失败：' + err.message); } }
+
+        async function syncFromGitHub() { const token = document.getElementById('github-token').value.trim(); if (!token) { alert('请输入 GitHub Token'); return; } localStorage.setItem('github_token', token); try { const resp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } }); const data = await resp.json(); const content = decodeURIComponent(escape(atob(data.content))); readings = JSON.parse(content); saveData(); renderList(); alert('✅ 数据已从 GitHub 恢复！共 ' + readings.length + ' 条记录'); closeSyncModal(); } catch (err) { alert('❌ 恢复失败：' + err.message); } }
+
+        init();
+    </script>
+</body>
+</html>
