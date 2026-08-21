@@ -1,0 +1,19 @@
+[project]
+sub_id = "90e9ad05"
+name = "bp-monitor"
+requires = ["nodejs-24"]
+project_type = "web"
+version = "0.0.35"
+
+[preview]
+preview_enable = "enabled"
+
+[dev]
+run = ["bash", "scripts/run.sh"]
+
+[deploy]
+build = ["echo", "no-build"]
+run = ["echo", "static-site"]
+
+[subprojects]
+path = ["."]

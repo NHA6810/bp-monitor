@@ -1,5 +1,7 @@
 node_modules
 dist
+.preview
+.coze
 .DS_Store
 *.swp
 .git/*
