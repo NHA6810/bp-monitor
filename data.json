@@ -1,0 +1,12 @@
+[
+  {"id":1,"record_date":"2025-08-21","record_time":"06:07","systolic":129,"diastolic":81,"pulse":62,"note":""},
+  {"id":2,"record_date":"2025-08-21","record_time":"05:08","systolic":116,"diastolic":80,"pulse":60,"note":"早上醒来"},
+  {"id":3,"record_date":"2025-08-20","record_time":"20:16","systolic":121,"diastolic":73,"pulse":85,"note":""},
+  {"id":4,"record_date":"2025-08-20","record_time":"06:22","systolic":113,"diastolic":80,"pulse":78,"note":"起床"},
+  {"id":5,"record_date":"2025-08-19","record_time":"17:41","systolic":133,"diastolic":83,"pulse":76,"note":"电脑前"},
+  {"id":6,"record_date":"2025-08-17","record_time":"15:38","systolic":140,"diastolic":88,"pulse":65,"note":"下午办公室眼睛有酸胀感"},
+  {"id":7,"record_date":"2025-08-17","record_time":"06:00","systolic":138,"diastolic":93,"pulse":63,"note":"起床前"},
+  {"id":8,"record_date":"2025-08-16","record_time":"21:31","systolic":113,"diastolic":83,"pulse":86,"note":"骑行锻炼后"},
+  {"id":9,"record_date":"2025-08-14","record_time":"13:00","systolic":140,"diastolic":92,"pulse":77,"note":"午饭后喝咖啡"},
+  {"id":10,"record_date":"2025-08-13","record_time":"08:39","systolic":137,"diastolic":89,"pulse":79,"note":"大便后 用力了"}
+]
