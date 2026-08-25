@@ -619,5 +619,14 @@
     "diastolic": 91,
     "pulse": 67,
     "note": ""
+  },
+  {
+    "id": 79,
+    "record_date": "2026-08-26",
+    "record_time": "06:35",
+    "systolic": 110,
+    "diastolic": 71,
+    "pulse": 78,
+    "note": "洗漱完毕"
   }
 ]
