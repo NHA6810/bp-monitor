@@ -592,5 +592,14 @@
     "diastolic": 64,
     "pulse": 65,
     "note": "运动𡰪"
+  },
+  {
+    "id": 76,
+    "record_date": "2026-08-26",
+    "record_time": "06:10",
+    "systolic": 124,
+    "diastolic": 81,
+    "pulse": 61,
+    "note": "醒来"
   }
 ]
