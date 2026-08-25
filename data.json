@@ -601,5 +601,23 @@
     "diastolic": 81,
     "pulse": 61,
     "note": "醒来"
+  },
+  {
+    "id": 77,
+    "record_date": "2026-08-26",
+    "record_time": "05:30",
+    "systolic": 124,
+    "diastolic": 81,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 78,
+    "record_date": "2026-08-26",
+    "record_time": "03:30",
+    "systolic": 130,
+    "diastolic": 91,
+    "pulse": 67,
+    "note": ""
   }
 ]
