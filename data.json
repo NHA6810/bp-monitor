@@ -574,5 +574,23 @@
     "diastolic": 85,
     "pulse": 76,
     "note": "午饭后"
+  },
+  {
+    "id": 74,
+    "record_date": "2026-08-25",
+    "record_time": "19:20",
+    "systolic": 103,
+    "diastolic": 64,
+    "pulse": 82,
+    "note": ""
+  },
+  {
+    "id": 75,
+    "record_date": "2026-08-25",
+    "record_time": "23:29",
+    "systolic": 111,
+    "diastolic": 64,
+    "pulse": 65,
+    "note": "运动𡰪"
   }
 ]
