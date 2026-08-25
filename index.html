@@ -244,7 +244,7 @@
                 const data = await resp.json();
                 const sha = data.sha;
 
-                // 数据相同则跳过上传
+                // 数据相同时跳过上传
                 try {
                     const remoteContent = decodeURIComponent(escape(atob(data.content)));
                     const remoteData = JSON.parse(remoteContent);
@@ -253,20 +253,13 @@
                         closeSyncModal();
                         return;
                     }
-                } catch (e) { /* 比较失败，继续上传 */ }
+                } catch (e) { /* 比较失败则继续上传 */ }
 
-                // 使用 TextEncoder 编码，解决 iOS Safari 中文编码问题
-                const jsonStr = JSON.stringify(readings, null, 2);
-                const encoder = new TextEncoder();
-                const uint8Array = encoder.encode(jsonStr);
-                let binary = '';
-                for (let i = 0; i < uint8Array.length; i++) { binary += String.fromCharCode(uint8Array[i]); }
-                const encoded = btoa(binary);
-
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(readings, null, 2))));
                 const updateResp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', {
                     method: 'PUT',
                     headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
-                    body: JSON.stringify({ message: 'sync: 从手机同步数据 ' + new Date().toISOString(), content: encoded, sha })
+                    body: JSON.stringify({ message: 'sync: 从手机同步数据 ' + new Date().toISOString(), content, sha })
                 });
                 if (updateResp.ok) {
                     alert('✅ 数据已成功上传到 GitHub！');
