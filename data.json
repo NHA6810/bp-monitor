@@ -664,5 +664,14 @@
     "diastolic": 75,
     "pulse": 87,
     "note": "烧晚饭后烧晚饭后"
+  },
+  {
+    "id": 84,
+    "record_date": "2026-08-26",
+    "record_time": "19:45",
+    "systolic": 121,
+    "diastolic": 68,
+    "pulse": 84,
+    "note": ""
   }
 ]
