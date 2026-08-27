@@ -781,5 +781,14 @@
     "diastolic": 76,
     "pulse": 65,
     "note": "办公室"
+  },
+  {
+    "id": 97,
+    "record_date": "2026-08-27",
+    "record_time": "11:09",
+    "systolic": 134,
+    "diastolic": 85,
+    "pulse": 61,
+    "note": ""
   }
 ]
