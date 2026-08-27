@@ -772,5 +772,14 @@
     "diastolic": 74,
     "pulse": 81,
     "note": "早上洗漱完毕"
+  },
+  {
+    "id": 96,
+    "record_date": "2026-08-27",
+    "record_time": "08:54",
+    "systolic": 113,
+    "diastolic": 76,
+    "pulse": 65,
+    "note": "办公室"
   }
 ]
