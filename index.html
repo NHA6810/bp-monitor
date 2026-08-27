@@ -303,6 +303,25 @@
             });
         }
 
+        // 轻量压缩：把大图压缩到最长边≤1200px，JPEG质量0.9，避免iPhone大图撑爆请求体
+        function compressForOCR(imageDataUrl) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = function() {
+                    const maxDim = 1200;
+                    let w = img.width, h = img.height;
+                    if (Math.max(w, h) <= maxDim) { resolve(imageDataUrl); return; }
+                    const scale = maxDim / Math.max(w, h);
+                    const canvas = document.createElement('canvas');
+                    canvas.width = Math.round(w * scale);
+                    canvas.height = Math.round(h * scale);
+                    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+                    resolve(canvas.toDataURL('image/jpeg', 0.9));
+                };
+                img.src = imageDataUrl;
+            });
+        }
+
         async function doOCR(imageDataUrl, rotation) {
             document.getElementById('progress-text').textContent = '正在预处理图片...';
             document.getElementById('progress-fill').style.width = '15%';
@@ -316,7 +335,8 @@
                 if (!tokenData.access_token) throw new Error('获取令牌失败');
 
                 const base64Processed = processedImage.split(',')[1];
-                const base64Original = imageDataUrl.split(',')[1];
+                const compressedImage = await compressForOCR(imageDataUrl);
+                const base64Original = compressedImage.split(',')[1];
                 let bestParsed = { systolic: null, diastolic: null, pulse: null };
 
                 // 尝试1：高精度接口 + 原始图
@@ -333,7 +353,7 @@
                             const parsed = parseBPFromText(text);
                             if (parsed.systolic && parsed.diastolic) { bestParsed = parsed; }
                         }
-                    } catch (e) { console.warn('原始图OCR失败:', e); }
+                    } catch (e) { console.warn('原始图OCR失败:', e.message || e); }
                 }
 
                 // 尝试2：高精度接口 + 预处理图
@@ -350,7 +370,7 @@
                             const parsed = parseBPFromText(text);
                             if (parsed.systolic && parsed.diastolic) { bestParsed = parsed; }
                         }
-                    } catch (e) { console.warn('高精度OCR失败:', e); }
+                    } catch (e) { console.warn('高精度OCR(预处理)失败:', e.message || e); }
                 }
 
                 // 尝试3：数字识别接口（兜底） + 预处理图
@@ -366,7 +386,7 @@
                         const parsed = parseBPFromText(text);
                         if (parsed.systolic && parsed.diastolic) { bestParsed = parsed; }
                     }
-                } catch (e) { console.warn('数字OCR失败:', e); }
+                } catch (e) { console.warn('数字OCR失败:', e.message || e); }
 
                 document.getElementById('progress-fill').style.width = '100%';
                 if (bestParsed.systolic || bestParsed.diastolic) {
@@ -376,7 +396,7 @@
                 }
             } catch (err) {
                 console.error('OCR 错误:', err);
-                alert('⚠️ 识别失败：' + err.message);
+                alert('⚠️ 识别失败：' + (err.message || '网络连接失败，请检查网络后重试'));
                 showOCRResult({ systolic: null, diastolic: null, pulse: null });
             }
         }
