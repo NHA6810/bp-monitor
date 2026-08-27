@@ -808,5 +808,23 @@
     "diastolic": 72,
     "pulse": 95,
     "note": "吃过药，晚饭后"
+  },
+  {
+    "id": 100,
+    "record_date": "2026-08-27",
+    "record_time": "20:09",
+    "systolic": 101,
+    "diastolic": 60,
+    "pulse": 82,
+    "note": "右手"
+  },
+  {
+    "id": 101,
+    "record_date": "2026-08-27",
+    "record_time": "20:02",
+    "systolic": 90,
+    "diastolic": 60,
+    "pulse": 79,
+    "note": "左手打盹起来"
   }
 ]
