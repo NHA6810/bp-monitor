@@ -826,5 +826,14 @@
     "diastolic": 60,
     "pulse": 79,
     "note": "左手打盹起来"
+  },
+  {
+    "id": 102,
+    "record_date": "2026-08-27",
+    "record_time": "22:26",
+    "systolic": 108,
+    "diastolic": 71,
+    "pulse": 76,
+    "note": ""
   }
 ]
