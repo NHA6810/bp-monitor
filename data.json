@@ -799,5 +799,14 @@
     "diastolic": 87,
     "pulse": 70,
     "note": ""
+  },
+  {
+    "id": 99,
+    "record_date": "2026-08-27",
+    "record_time": "18:42",
+    "systolic": 104,
+    "diastolic": 72,
+    "pulse": 95,
+    "note": "吃过药，晚饭后"
   }
 ]
