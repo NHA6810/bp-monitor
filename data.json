@@ -889,5 +889,32 @@
     "diastolic": 77,
     "pulse": 59,
     "note": ""
+  },
+  {
+    "id": 109,
+    "record_date": "2026-08-28",
+    "record_time": "06:02",
+    "systolic": 122,
+    "diastolic": 84,
+    "pulse": 59,
+    "note": ""
+  },
+  {
+    "id": 110,
+    "record_date": "2026-08-28",
+    "record_time": "06:30",
+    "systolic": 111,
+    "diastolic": 74,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 111,
+    "record_date": "2026-08-28",
+    "record_time": "06:54",
+    "systolic": 94,
+    "diastolic": 64,
+    "pulse": 73,
+    "note": "洗漱完毕"
   }
 ]
