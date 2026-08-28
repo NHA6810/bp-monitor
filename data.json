@@ -961,5 +961,23 @@
     "diastolic": 72,
     "pulse": 90,
     "note": "上了回上海大巴"
+  },
+  {
+    "id": 117,
+    "record_date": "2026-08-28",
+    "record_time": "16:42",
+    "systolic": 110,
+    "diastolic": 76,
+    "pulse": 80,
+    "note": ""
+  },
+  {
+    "id": 118,
+    "record_date": "2026-08-28",
+    "record_time": "19:13",
+    "systolic": 122,
+    "diastolic": 79,
+    "pulse": 71,
+    "note": "长途汽车"
   }
 ]
