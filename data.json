@@ -979,5 +979,23 @@
     "diastolic": 79,
     "pulse": 71,
     "note": "长途汽车"
+  },
+  {
+    "id": 119,
+    "record_date": "2026-08-28",
+    "record_time": "22:41",
+    "systolic": 100,
+    "diastolic": 71,
+    "pulse": 85,
+    "note": "晚上洗澡后"
+  },
+  {
+    "id": 120,
+    "record_date": "2026-08-28",
+    "record_time": "23:11",
+    "systolic": 118,
+    "diastolic": 76,
+    "pulse": 65,
+    "note": ""
   }
 ]
