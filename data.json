@@ -916,5 +916,32 @@
     "diastolic": 64,
     "pulse": 73,
     "note": "洗漱完毕"
+  },
+  {
+    "id": 112,
+    "record_date": "2026-08-28",
+    "record_time": "08:53",
+    "systolic": 94,
+    "diastolic": 65,
+    "pulse": 101,
+    "note": "早饭、运动，便后"
+  },
+  {
+    "id": 113,
+    "record_date": "2026-08-28",
+    "record_time": "09:31",
+    "systolic": 105,
+    "diastolic": 65,
+    "pulse": 100,
+    "note": "煮好咖啡"
+  },
+  {
+    "id": 114,
+    "record_date": "2026-08-28",
+    "record_time": "10:50",
+    "systolic": 111,
+    "diastolic": 69,
+    "pulse": 89,
+    "note": ""
   }
 ]
