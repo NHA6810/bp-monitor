@@ -1069,5 +1069,23 @@
     "diastolic": 76,
     "pulse": 89,
     "note": ""
+  },
+  {
+    "id": 129,
+    "record_date": "2026-08-29",
+    "record_time": "22:08",
+    "systolic": 109,
+    "diastolic": 81,
+    "pulse": 84,
+    "note": "骑行锻炼回来"
+  },
+  {
+    "id": 130,
+    "record_date": "2026-08-29",
+    "record_time": "22:34",
+    "systolic": 120,
+    "diastolic": 76,
+    "pulse": 79,
+    "note": "洗澡后"
   }
 ]
