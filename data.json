@@ -1033,5 +1033,14 @@
     "diastolic": 86,
     "pulse": 97,
     "note": "早上烧好菜"
+  },
+  {
+    "id": 125,
+    "record_date": "2026-08-29",
+    "record_time": "09:07",
+    "systolic": 115,
+    "diastolic": 74,
+    "pulse": 93,
+    "note": ""
   }
 ]
