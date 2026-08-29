@@ -1042,5 +1042,14 @@
     "diastolic": 74,
     "pulse": 93,
     "note": ""
+  },
+  {
+    "id": 126,
+    "record_date": "2026-08-29",
+    "record_time": "15:42",
+    "systolic": 117,
+    "diastolic": 81,
+    "pulse": 97,
+    "note": "外出回来"
   }
 ]
