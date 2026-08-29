@@ -1087,5 +1087,32 @@
     "diastolic": 76,
     "pulse": 79,
     "note": "洗澡后"
+  },
+  {
+    "id": 131,
+    "record_date": "2026-08-30",
+    "record_time": "03:18",
+    "systolic": 139,
+    "diastolic": 94,
+    "pulse": 69,
+    "note": "昨天没吃药"
+  },
+  {
+    "id": 132,
+    "record_date": "2026-08-30",
+    "record_time": "03:33",
+    "systolic": 128,
+    "diastolic": 89,
+    "pulse": 68,
+    "note": "起床小便后"
+  },
+  {
+    "id": 133,
+    "record_date": "2026-08-30",
+    "record_time": "04:01",
+    "systolic": 131,
+    "diastolic": 84,
+    "pulse": 63,
+    "note": ""
   }
 ]
