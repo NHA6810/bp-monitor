@@ -1114,5 +1114,50 @@
     "diastolic": 84,
     "pulse": 63,
     "note": ""
+  },
+  {
+    "id": 134,
+    "record_date": "2026-08-30",
+    "record_time": "05:05",
+    "systolic": 131,
+    "diastolic": 90,
+    "pulse": 63,
+    "note": ""
+  },
+  {
+    "id": 135,
+    "record_date": "2026-08-30",
+    "record_time": "06:00",
+    "systolic": 144,
+    "diastolic": 98,
+    "pulse": 70,
+    "note": ""
+  },
+  {
+    "id": 136,
+    "record_date": "2026-08-30",
+    "record_time": "07:49",
+    "systolic": 130,
+    "diastolic": 88,
+    "pulse": 70,
+    "note": "起床洗漱后"
+  },
+  {
+    "id": 137,
+    "record_date": "2026-08-30",
+    "record_time": "08:38",
+    "systolic": 124,
+    "diastolic": 79,
+    "pulse": 89,
+    "note": "早饭后"
+  },
+  {
+    "id": 138,
+    "record_date": "2026-08-30",
+    "record_time": "11:10",
+    "systolic": 119,
+    "diastolic": 75,
+    "pulse": 105,
+    "note": "锻炼好到家"
   }
 ]
