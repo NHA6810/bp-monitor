@@ -1,88 +1,25 @@
 [
   {
-    "id": 1,
-    "record_date": "2025-08-21",
-    "record_time": "06:07",
-    "systolic": 129,
-    "diastolic": 81,
-    "pulse": 62,
-    "note": ""
-  },
-  {
-    "id": 2,
-    "record_date": "2025-08-21",
-    "record_time": "05:08",
-    "systolic": 116,
+    "id": 26,
+    "record_date": "2025-08-14",
+    "record_time": "10:30",
+    "systolic": 120,
     "diastolic": 80,
-    "pulse": 60,
-    "note": "早上醒来"
-  },
-  {
-    "id": 3,
-    "record_date": "2025-08-20",
-    "record_time": "20:16",
-    "systolic": 121,
-    "diastolic": 73,
-    "pulse": 85,
+    "pulse": 72,
     "note": ""
-  },
-  {
-    "id": 4,
-    "record_date": "2025-08-20",
-    "record_time": "06:22",
-    "systolic": 113,
-    "diastolic": 80,
-    "pulse": 78,
-    "note": "起床"
-  },
-  {
-    "id": 5,
-    "record_date": "2025-08-19",
-    "record_time": "17:41",
-    "systolic": 133,
-    "diastolic": 83,
-    "pulse": 76,
-    "note": "电脑前"
-  },
-  {
-    "id": 6,
-    "record_date": "2025-08-17",
-    "record_time": "15:38",
-    "systolic": 140,
-    "diastolic": 88,
-    "pulse": 65,
-    "note": "下午办公室眼睛有酸胀感"
-  },
-  {
-    "id": 7,
-    "record_date": "2025-08-17",
-    "record_time": "06:00",
-    "systolic": 138,
-    "diastolic": 93,
-    "pulse": 63,
-    "note": "起床前"
-  },
-  {
-    "id": 8,
-    "record_date": "2025-08-16",
-    "record_time": "21:31",
-    "systolic": 113,
-    "diastolic": 83,
-    "pulse": 86,
-    "note": "骑行锻炼后"
   },
   {
     "id": 9,
-    "record_date": "2025-08-14",
-    "record_time": "13:00",
-    "systolic": 140,
-    "diastolic": 92,
+    "record_date": "2026-08-13",
+    "record_time": "08:07",
+    "systolic": 116,
+    "diastolic": 75,
     "pulse": 77,
-    "note": "午饭后喝咖啡"
+    "note": ""
   },
   {
     "id": 10,
-    "record_date": "2025-08-13",
+    "record_date": "2026-08-13",
     "record_time": "08:39",
     "systolic": 137,
     "diastolic": 89,
@@ -91,11 +28,1244 @@
   },
   {
     "id": 11,
-    "record_date": "2026-08-24",
-    "record_time": "10:11",
-    "systolic": 132,
+    "record_date": "2026-08-13",
+    "record_time": "09:01",
+    "systolic": 139,
+    "diastolic": 82,
+    "pulse": 76,
+    "note": ""
+  },
+  {
+    "id": 12,
+    "record_date": "2026-08-13",
+    "record_time": "09:27",
+    "systolic": 118,
+    "diastolic": 80,
+    "pulse": 66,
+    "note": ""
+  },
+  {
+    "id": 13,
+    "record_date": "2026-08-13",
+    "record_time": "09:56",
+    "systolic": 125,
+    "diastolic": 85,
+    "pulse": 71,
+    "note": ""
+  },
+  {
+    "id": 14,
+    "record_date": "2026-08-13",
+    "record_time": "10:21",
+    "systolic": 133,
+    "diastolic": 88,
+    "pulse": 66,
+    "note": "办公室办公，无任何活动"
+  },
+  {
+    "id": 15,
+    "record_date": "2026-08-13",
+    "record_time": "13:01",
+    "systolic": 120,
+    "diastolic": 73,
+    "pulse": 76,
+    "note": "今天药已吃过"
+  },
+  {
+    "id": 16,
+    "record_date": "2026-08-13",
+    "record_time": "14:54",
+    "systolic": 126,
+    "diastolic": 78,
+    "pulse": 62,
+    "note": ""
+  },
+  {
+    "id": 17,
+    "record_date": "2026-08-13",
+    "record_time": "15:34",
+    "systolic": 115,
+    "diastolic": 79,
+    "pulse": 65,
+    "note": ""
+  },
+  {
+    "id": 18,
+    "record_date": "2026-08-13",
+    "record_time": "17:00",
+    "systolic": 123,
+    "diastolic": 86,
+    "pulse": 81,
+    "note": ""
+  },
+  {
+    "id": 19,
+    "record_date": "2026-08-13",
+    "record_time": "19:58",
+    "systolic": 119,
+    "diastolic": 82,
+    "pulse": 74,
+    "note": ""
+  },
+  {
+    "id": 20,
+    "record_date": "2026-08-13",
+    "record_time": "21:52",
+    "systolic": 98,
+    "diastolic": 63,
+    "pulse": 95,
+    "note": "晚上运功后"
+  },
+  {
+    "id": 21,
+    "record_date": "2026-08-13",
+    "record_time": "22:37",
+    "systolic": 129,
+    "diastolic": 81,
+    "pulse": 90,
+    "note": "洗好澡"
+  },
+  {
+    "id": 22,
+    "record_date": "2026-08-13",
+    "record_time": "22:47",
+    "systolic": 101,
+    "diastolic": 68,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 24,
+    "record_date": "2026-08-14",
+    "record_time": "06:02",
+    "systolic": 131,
+    "diastolic": 85,
+    "pulse": 65,
+    "note": "起床"
+  },
+  {
+    "id": 25,
+    "record_date": "2026-08-14",
+    "record_time": "09:02",
+    "systolic": 120,
+    "diastolic": 79,
+    "pulse": 67,
+    "note": "办公室"
+  },
+  {
+    "id": 27,
+    "record_date": "2026-08-14",
+    "record_time": "09:13",
+    "systolic": 121,
+    "diastolic": 72,
+    "pulse": 65,
+    "note": ""
+  },
+  {
+    "id": 28,
+    "record_date": "2026-08-14",
+    "record_time": "10:32",
+    "systolic": 118,
+    "diastolic": 75,
+    "pulse": 59,
+    "note": ""
+  },
+  {
+    "id": 29,
+    "record_date": "2026-08-14",
+    "record_time": "13:00",
+    "systolic": 140,
+    "diastolic": 92,
+    "pulse": 77,
+    "note": "午饭后喝咖啡"
+  },
+  {
+    "id": 30,
+    "record_date": "2026-08-14",
+    "record_time": "13:28",
+    "systolic": 129,
     "diastolic": 85,
     "pulse": 68,
+    "note": ""
+  },
+  {
+    "id": 31,
+    "record_date": "2026-08-14",
+    "record_time": "14:58",
+    "systolic": 137,
+    "diastolic": 86,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 32,
+    "record_date": "2026-08-14",
+    "record_time": "17:42",
+    "systolic": 107,
+    "diastolic": 71,
+    "pulse": 79,
+    "note": "晚饭后"
+  },
+  {
+    "id": 33,
+    "record_date": "2026-08-14",
+    "record_time": "18:33",
+    "systolic": 109,
+    "diastolic": 66,
+    "pulse": 77,
+    "note": ""
+  },
+  {
+    "id": 34,
+    "record_date": "2026-08-14",
+    "record_time": "22:56",
+    "systolic": 101,
+    "diastolic": 70,
+    "pulse": 67,
+    "note": ""
+  },
+  {
+    "id": 35,
+    "record_date": "2026-08-15",
+    "record_time": "14:57",
+    "systolic": 111,
+    "diastolic": 75,
+    "pulse": 77,
+    "note": "普陀山拜佛回来"
+  },
+  {
+    "id": 36,
+    "record_date": "2026-08-15",
+    "record_time": "22:10",
+    "systolic": 109,
+    "diastolic": 71,
+    "pulse": 72,
+    "note": ""
+  },
+  {
+    "id": 37,
+    "record_date": "2026-08-16",
+    "record_time": "05:30",
+    "systolic": 138,
+    "diastolic": 91,
+    "pulse": 62,
+    "note": "凌晨醒来"
+  },
+  {
+    "id": 49,
+    "record_date": "2026-08-16",
+    "record_time": "05:30",
+    "systolic": 146,
+    "diastolic": 86,
+    "pulse": 64,
+    "note": ""
+  },
+  {
+    "id": 38,
+    "record_date": "2026-08-16",
+    "record_time": "06:00",
+    "systolic": 126,
+    "diastolic": 88,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 48,
+    "record_date": "2026-08-16",
+    "record_time": "06:00",
+    "systolic": 146,
+    "diastolic": 86,
+    "pulse": 64,
+    "note": ""
+  },
+  {
+    "id": 39,
+    "record_date": "2026-08-16",
+    "record_time": "06:37",
+    "systolic": 119,
+    "diastolic": 73,
+    "pulse": 62,
+    "note": "准备起床"
+  },
+  {
+    "id": 40,
+    "record_date": "2026-08-16",
+    "record_time": "08:38",
+    "systolic": 105,
+    "diastolic": 69,
+    "pulse": 87,
+    "note": "早饭后"
+  },
+  {
+    "id": 41,
+    "record_date": "2026-08-16",
+    "record_time": "09:02",
+    "systolic": 92,
+    "diastolic": 63,
+    "pulse": 81,
+    "note": "办公时间"
+  },
+  {
+    "id": 42,
+    "record_date": "2026-08-16",
+    "record_time": "14:16",
+    "systolic": 108,
+    "diastolic": 68,
+    "pulse": 76,
+    "note": ""
+  },
+  {
+    "id": 43,
+    "record_date": "2026-08-16",
+    "record_time": "15:00",
+    "systolic": 122,
+    "diastolic": 81,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 44,
+    "record_date": "2026-08-16",
+    "record_time": "15:21",
+    "systolic": 121,
+    "diastolic": 78,
+    "pulse": 76,
+    "note": ""
+  },
+  {
+    "id": 45,
+    "record_date": "2026-08-16",
+    "record_time": "15:48",
+    "systolic": 114,
+    "diastolic": 75,
+    "pulse": 77,
+    "note": "办公"
+  },
+  {
+    "id": 46,
+    "record_date": "2026-08-16",
+    "record_time": "19:34",
+    "systolic": 104,
+    "diastolic": 73,
+    "pulse": 79,
+    "note": "晚饭后"
+  },
+  {
+    "id": 47,
+    "record_date": "2026-08-16",
+    "record_time": "21:31",
+    "systolic": 113,
+    "diastolic": 83,
+    "pulse": 86,
+    "note": "骑行锻炼后"
+  },
+  {
+    "id": 50,
+    "record_date": "2026-08-17",
+    "record_time": "05:30",
+    "systolic": 146,
+    "diastolic": 86,
+    "pulse": 64,
+    "note": "醒来-闹铃"
+  },
+  {
+    "id": 51,
+    "record_date": "2026-08-17",
+    "record_time": "06:00",
+    "systolic": 138,
+    "diastolic": 93,
+    "pulse": 63,
+    "note": "起床前"
+  },
+  {
+    "id": 52,
+    "record_date": "2026-08-17",
+    "record_time": "06:15",
+    "systolic": 119,
+    "diastolic": 78,
+    "pulse": 75,
+    "note": "洗涑完毕"
+  },
+  {
+    "id": 53,
+    "record_date": "2026-08-17",
+    "record_time": "06:30",
+    "systolic": 116,
+    "diastolic": 81,
+    "pulse": 76,
+    "note": "出发前"
+  },
+  {
+    "id": 54,
+    "record_date": "2026-08-17",
+    "record_time": "10:35",
+    "systolic": 136,
+    "diastolic": 85,
+    "pulse": 68,
+    "note": "办公室"
+  },
+  {
+    "id": 55,
+    "record_date": "2026-08-17",
+    "record_time": "11:11",
+    "systolic": 123,
+    "diastolic": 80,
+    "pulse": 63,
+    "note": "吃药后"
+  },
+  {
+    "id": 56,
+    "record_date": "2026-08-17",
+    "record_time": "15:38",
+    "systolic": 140,
+    "diastolic": 88,
+    "pulse": 65,
+    "note": "下午办公室眼睛有酸胀感"
+  },
+  {
+    "id": 57,
+    "record_date": "2026-08-17",
+    "record_time": "17:18",
+    "systolic": 111,
+    "diastolic": 74,
+    "pulse": 87,
+    "note": "做好晚饭"
+  },
+  {
+    "id": 58,
+    "record_date": "2026-08-19",
+    "record_time": "13:04",
+    "systolic": 109,
+    "diastolic": 73,
+    "pulse": 74,
+    "note": ""
+  },
+  {
+    "id": 59,
+    "record_date": "2026-08-19",
+    "record_time": "10:06",
+    "systolic": 119,
+    "diastolic": 73,
+    "pulse": 78,
+    "note": ""
+  },
+  {
+    "id": 60,
+    "record_date": "2026-08-19",
+    "record_time": "11:00",
+    "systolic": 124,
+    "diastolic": 73,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 61,
+    "record_date": "2026-08-19",
+    "record_time": "14:02",
+    "systolic": 124,
+    "diastolic": 79,
+    "pulse": 70,
+    "note": ""
+  },
+  {
+    "id": 62,
+    "record_date": "2026-08-19",
+    "record_time": "17:00",
+    "systolic": 119,
+    "diastolic": 83,
+    "pulse": 82,
+    "note": "到家后"
+  },
+  {
+    "id": 63,
+    "record_date": "2026-08-19",
+    "record_time": "17:41",
+    "systolic": 133,
+    "diastolic": 83,
+    "pulse": 76,
+    "note": "电脑前"
+  },
+  {
+    "id": 64,
+    "record_date": "2026-08-19",
+    "record_time": "22:54",
+    "systolic": 112,
+    "diastolic": 71,
+    "pulse": 77,
+    "note": "洗澡后"
+  },
+  {
+    "id": 65,
+    "record_date": "2026-08-19",
+    "record_time": "23:19",
+    "systolic": 112,
+    "diastolic": 66,
+    "pulse": 73,
+    "note": "睡前"
+  },
+  {
+    "id": 66,
+    "record_date": "2026-08-20",
+    "record_time": "06:22",
+    "systolic": 113,
+    "diastolic": 80,
+    "pulse": 78,
+    "note": "起床"
+  },
+  {
+    "id": 67,
+    "record_date": "2026-08-20",
+    "record_time": "06:00",
+    "systolic": 120,
+    "diastolic": 80,
+    "pulse": 64,
+    "note": ""
+  },
+  {
+    "id": 68,
+    "record_date": "2026-08-20",
+    "record_time": "05:30",
+    "systolic": 119,
+    "diastolic": 78,
+    "pulse": 63,
+    "note": "醒来"
+  },
+  {
+    "id": 69,
+    "record_date": "2026-08-20",
+    "record_time": "20:16",
+    "systolic": 121,
+    "diastolic": 73,
+    "pulse": 85,
+    "note": ""
+  },
+  {
+    "id": 70,
+    "record_date": "2026-08-21",
+    "record_time": "05:08",
+    "systolic": 116,
+    "diastolic": 80,
+    "pulse": 60,
+    "note": "早上醒来"
+  },
+  {
+    "id": 71,
+    "record_date": "2026-08-21",
+    "record_time": "06:07",
+    "systolic": 129,
+    "diastolic": 81,
+    "pulse": 62,
+    "note": ""
+  },
+  {
+    "id": 72,
+    "record_date": "2026-08-24",
+    "record_time": "08:28",
+    "systolic": 132,
+    "diastolic": 86,
+    "pulse": 68,
+    "note": ""
+  },
+  {
+    "id": 73,
+    "record_date": "2026-08-24",
+    "record_time": "12:41",
+    "systolic": 126,
+    "diastolic": 85,
+    "pulse": 76,
+    "note": "午饭后"
+  },
+  {
+    "id": 74,
+    "record_date": "2026-08-25",
+    "record_time": "19:20",
+    "systolic": 103,
+    "diastolic": 64,
+    "pulse": 82,
+    "note": ""
+  },
+  {
+    "id": 75,
+    "record_date": "2026-08-25",
+    "record_time": "23:29",
+    "systolic": 111,
+    "diastolic": 64,
+    "pulse": 65,
+    "note": "运动𡰪"
+  },
+  {
+    "id": 76,
+    "record_date": "2026-08-26",
+    "record_time": "06:10",
+    "systolic": 124,
+    "diastolic": 81,
+    "pulse": 61,
+    "note": "醒来"
+  },
+  {
+    "id": 77,
+    "record_date": "2026-08-26",
+    "record_time": "05:30",
+    "systolic": 124,
+    "diastolic": 81,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 78,
+    "record_date": "2026-08-26",
+    "record_time": "03:30",
+    "systolic": 130,
+    "diastolic": 91,
+    "pulse": 67,
+    "note": ""
+  },
+  {
+    "id": 79,
+    "record_date": "2026-08-26",
+    "record_time": "06:35",
+    "systolic": 110,
+    "diastolic": 71,
+    "pulse": 78,
+    "note": "洗漱完毕"
+  },
+  {
+    "id": 80,
+    "record_date": "2026-08-26",
+    "record_time": "07:13",
+    "systolic": 122,
+    "diastolic": 80,
+    "pulse": 75,
+    "note": "到公司"
+  },
+  {
+    "id": 81,
+    "record_date": "2026-08-26",
+    "record_time": "08:53",
+    "systolic": 107,
+    "diastolic": 75,
+    "pulse": 78,
+    "note": "办公中"
+  },
+  {
+    "id": 82,
+    "record_date": "2026-08-26",
+    "record_time": "13:39",
+    "systolic": 134,
+    "diastolic": 87,
+    "pulse": 70,
+    "note": ""
+  },
+  {
+    "id": 83,
+    "record_date": "2026-08-26",
+    "record_time": "17:38",
+    "systolic": 106,
+    "diastolic": 75,
+    "pulse": 87,
+    "note": "烧晚饭后烧晚饭后"
+  },
+  {
+    "id": 84,
+    "record_date": "2026-08-26",
+    "record_time": "19:45",
+    "systolic": 121,
+    "diastolic": 68,
+    "pulse": 84,
+    "note": ""
+  },
+  {
+    "id": 85,
+    "record_date": "2026-08-26",
+    "record_time": "20:36",
+    "systolic": 107,
+    "diastolic": 74,
+    "pulse": 82,
+    "note": ""
+  },
+  {
+    "id": 86,
+    "record_date": "2026-08-26",
+    "record_time": "23:46",
+    "systolic": 94,
+    "diastolic": 64,
+    "pulse": 84,
+    "note": "洗澡后"
+  },
+  {
+    "id": 87,
+    "record_date": "2026-08-27",
+    "record_time": "03:57",
+    "systolic": 129,
+    "diastolic": 89,
+    "pulse": 63,
+    "note": ""
+  },
+  {
+    "id": 88,
+    "record_date": "2026-08-27",
+    "record_time": "04:34",
+    "systolic": 131,
+    "diastolic": 90,
+    "pulse": 65,
+    "note": ""
+  },
+  {
+    "id": 89,
+    "record_date": "2026-08-27",
+    "record_time": "04:51",
+    "systolic": 116,
+    "diastolic": 86,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 90,
+    "record_date": "2026-08-27",
+    "record_time": "05:02",
+    "systolic": 115,
+    "diastolic": 76,
+    "pulse": 59,
+    "note": ""
+  },
+  {
+    "id": 91,
+    "record_date": "2026-08-27",
+    "record_time": "05:17",
+    "systolic": 118,
+    "diastolic": 83,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 92,
+    "record_date": "2026-08-27",
+    "record_time": "05:31",
+    "systolic": 121,
+    "diastolic": 80,
+    "pulse": 58,
+    "note": ""
+  },
+  {
+    "id": 93,
+    "record_date": "2026-08-27",
+    "record_time": "05:59",
+    "systolic": 119,
+    "diastolic": 80,
+    "pulse": 58,
+    "note": ""
+  },
+  {
+    "id": 94,
+    "record_date": "2026-08-27",
+    "record_time": "06:15",
+    "systolic": 119,
+    "diastolic": 72,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 95,
+    "record_date": "2026-08-27",
+    "record_time": "06:27",
+    "systolic": 112,
+    "diastolic": 74,
+    "pulse": 81,
+    "note": "早上洗漱完毕"
+  },
+  {
+    "id": 96,
+    "record_date": "2026-08-27",
+    "record_time": "08:54",
+    "systolic": 113,
+    "diastolic": 76,
+    "pulse": 65,
+    "note": "办公室"
+  },
+  {
+    "id": 97,
+    "record_date": "2026-08-27",
+    "record_time": "11:09",
+    "systolic": 134,
+    "diastolic": 85,
+    "pulse": 61,
+    "note": ""
+  },
+  {
+    "id": 98,
+    "record_date": "2026-08-27",
+    "record_time": "15:08",
+    "systolic": 135,
+    "diastolic": 87,
+    "pulse": 70,
+    "note": ""
+  },
+  {
+    "id": 99,
+    "record_date": "2026-08-27",
+    "record_time": "18:42",
+    "systolic": 104,
+    "diastolic": 72,
+    "pulse": 95,
+    "note": "吃过药，晚饭后"
+  },
+  {
+    "id": 100,
+    "record_date": "2026-08-27",
+    "record_time": "20:09",
+    "systolic": 101,
+    "diastolic": 60,
+    "pulse": 82,
+    "note": "右手"
+  },
+  {
+    "id": 101,
+    "record_date": "2026-08-27",
+    "record_time": "20:02",
+    "systolic": 90,
+    "diastolic": 60,
+    "pulse": 79,
+    "note": "左手打盹起来"
+  },
+  {
+    "id": 102,
+    "record_date": "2026-08-27",
+    "record_time": "22:26",
+    "systolic": 108,
+    "diastolic": 71,
+    "pulse": 76,
+    "note": ""
+  },
+  {
+    "id": 103,
+    "record_date": "2026-08-27",
+    "record_time": "23:23",
+    "systolic": 113,
+    "diastolic": 76,
+    "pulse": 62,
+    "note": "睡醒"
+  },
+  {
+    "id": 104,
+    "record_date": "2026-08-28",
+    "record_time": "00:27",
+    "systolic": 110,
+    "diastolic": 73,
+    "pulse": 63,
+    "note": "After the pee"
+  },
+  {
+    "id": 105,
+    "record_date": "2026-08-28",
+    "record_time": "02:51",
+    "systolic": 117,
+    "diastolic": 82,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 106,
+    "record_date": "2026-08-28",
+    "record_time": "03:21",
+    "systolic": 113,
+    "diastolic": 79,
+    "pulse": 56,
+    "note": ""
+  },
+  {
+    "id": 107,
+    "record_date": "2026-08-28",
+    "record_time": "04:51",
+    "systolic": 112,
+    "diastolic": 77,
+    "pulse": 57,
+    "note": ""
+  },
+  {
+    "id": 108,
+    "record_date": "2026-08-28",
+    "record_time": "05:19",
+    "systolic": 115,
+    "diastolic": 77,
+    "pulse": 59,
+    "note": ""
+  },
+  {
+    "id": 109,
+    "record_date": "2026-08-28",
+    "record_time": "06:02",
+    "systolic": 122,
+    "diastolic": 84,
+    "pulse": 59,
+    "note": ""
+  },
+  {
+    "id": 110,
+    "record_date": "2026-08-28",
+    "record_time": "06:30",
+    "systolic": 111,
+    "diastolic": 74,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 111,
+    "record_date": "2026-08-28",
+    "record_time": "06:54",
+    "systolic": 94,
+    "diastolic": 64,
+    "pulse": 73,
+    "note": "洗漱完毕"
+  },
+  {
+    "id": 112,
+    "record_date": "2026-08-28",
+    "record_time": "08:53",
+    "systolic": 94,
+    "diastolic": 65,
+    "pulse": 101,
+    "note": "早饭、运动，便后"
+  },
+  {
+    "id": 113,
+    "record_date": "2026-08-28",
+    "record_time": "09:31",
+    "systolic": 105,
+    "diastolic": 65,
+    "pulse": 100,
+    "note": "煮好咖啡"
+  },
+  {
+    "id": 114,
+    "record_date": "2026-08-28",
+    "record_time": "10:50",
+    "systolic": 111,
+    "diastolic": 69,
+    "pulse": 89,
+    "note": ""
+  },
+  {
+    "id": 115,
+    "record_date": "2026-08-28",
+    "record_time": "12:05",
+    "systolic": 103,
+    "diastolic": 68,
+    "pulse": 87,
+    "note": ""
+  },
+  {
+    "id": 116,
+    "record_date": "2026-08-28",
+    "record_time": "15:59",
+    "systolic": 116,
+    "diastolic": 72,
+    "pulse": 90,
+    "note": "上了回上海大巴"
+  },
+  {
+    "id": 117,
+    "record_date": "2026-08-28",
+    "record_time": "16:42",
+    "systolic": 110,
+    "diastolic": 76,
+    "pulse": 80,
+    "note": ""
+  },
+  {
+    "id": 118,
+    "record_date": "2026-08-28",
+    "record_time": "19:13",
+    "systolic": 122,
+    "diastolic": 79,
+    "pulse": 71,
+    "note": "长途汽车"
+  },
+  {
+    "id": 119,
+    "record_date": "2026-08-28",
+    "record_time": "22:41",
+    "systolic": 100,
+    "diastolic": 71,
+    "pulse": 85,
+    "note": "晚上洗澡后"
+  },
+  {
+    "id": 120,
+    "record_date": "2026-08-28",
+    "record_time": "23:11",
+    "systolic": 118,
+    "diastolic": 76,
+    "pulse": 65,
+    "note": ""
+  },
+  {
+    "id": 121,
+    "record_date": "2026-08-29",
+    "record_time": "03:18",
+    "systolic": 131,
+    "diastolic": 91,
+    "pulse": 69,
+    "note": ""
+  },
+  {
+    "id": 122,
+    "record_date": "2026-08-29",
+    "record_time": "04:33",
+    "systolic": 131,
+    "diastolic": 90,
+    "pulse": 62,
+    "note": ""
+  },
+  {
+    "id": 123,
+    "record_date": "2026-08-29",
+    "record_time": "05:06",
+    "systolic": 128,
+    "diastolic": 85,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 124,
+    "record_date": "2026-08-29",
+    "record_time": "08:30",
+    "systolic": 122,
+    "diastolic": 86,
+    "pulse": 97,
+    "note": "早上烧好菜"
+  },
+  {
+    "id": 125,
+    "record_date": "2026-08-29",
+    "record_time": "09:07",
+    "systolic": 115,
+    "diastolic": 74,
+    "pulse": 93,
+    "note": ""
+  },
+  {
+    "id": 126,
+    "record_date": "2026-08-29",
+    "record_time": "15:42",
+    "systolic": 117,
+    "diastolic": 81,
+    "pulse": 97,
+    "note": "外出回来"
+  },
+  {
+    "id": 127,
+    "record_date": "2026-08-29",
+    "record_time": "17:06",
+    "systolic": 115,
+    "diastolic": 79,
+    "pulse": 95,
+    "note": "锻炼后"
+  },
+  {
+    "id": 128,
+    "record_date": "2026-08-29",
+    "record_time": "18:19",
+    "systolic": 115,
+    "diastolic": 76,
+    "pulse": 89,
+    "note": ""
+  },
+  {
+    "id": 129,
+    "record_date": "2026-08-29",
+    "record_time": "22:08",
+    "systolic": 109,
+    "diastolic": 81,
+    "pulse": 84,
+    "note": "骑行锻炼回来"
+  },
+  {
+    "id": 130,
+    "record_date": "2026-08-29",
+    "record_time": "22:34",
+    "systolic": 120,
+    "diastolic": 76,
+    "pulse": 79,
+    "note": "洗澡后"
+  },
+  {
+    "id": 131,
+    "record_date": "2026-08-30",
+    "record_time": "03:18",
+    "systolic": 139,
+    "diastolic": 94,
+    "pulse": 69,
+    "note": "昨天没吃药"
+  },
+  {
+    "id": 132,
+    "record_date": "2026-08-30",
+    "record_time": "03:33",
+    "systolic": 128,
+    "diastolic": 89,
+    "pulse": 68,
+    "note": "起床小便后"
+  },
+  {
+    "id": 133,
+    "record_date": "2026-08-30",
+    "record_time": "04:01",
+    "systolic": 131,
+    "diastolic": 84,
+    "pulse": 63,
+    "note": ""
+  },
+  {
+    "id": 134,
+    "record_date": "2026-08-30",
+    "record_time": "05:05",
+    "systolic": 131,
+    "diastolic": 90,
+    "pulse": 63,
+    "note": ""
+  },
+  {
+    "id": 135,
+    "record_date": "2026-08-30",
+    "record_time": "06:00",
+    "systolic": 144,
+    "diastolic": 98,
+    "pulse": 70,
+    "note": ""
+  },
+  {
+    "id": 136,
+    "record_date": "2026-08-30",
+    "record_time": "07:49",
+    "systolic": 130,
+    "diastolic": 88,
+    "pulse": 70,
+    "note": "起床洗漱后"
+  },
+  {
+    "id": 137,
+    "record_date": "2026-08-30",
+    "record_time": "08:38",
+    "systolic": 124,
+    "diastolic": 79,
+    "pulse": 89,
+    "note": "早饭后"
+  },
+  {
+    "id": 138,
+    "record_date": "2026-08-30",
+    "record_time": "11:10",
+    "systolic": 119,
+    "diastolic": 75,
+    "pulse": 105,
+    "note": "锻炼好到家"
+  },
+  {
+    "id": 139,
+    "record_date": "2026-08-30",
+    "record_time": "14:15",
+    "systolic": 122,
+    "diastolic": 77,
+    "pulse": 95,
+    "note": "吃过药"
+  },
+  {
+    "id": 140,
+    "record_date": "2026-08-30",
+    "record_time": "15:24",
+    "systolic": 115,
+    "diastolic": 74,
+    "pulse": 79,
+    "note": "车站，登车了"
+  },
+  {
+    "id": 141,
+    "record_date": "2026-08-30",
+    "record_time": "18:49",
+    "systolic": 107,
+    "diastolic": 69,
+    "pulse": 69,
+    "note": "车上"
+  },
+  {
+    "id": 142,
+    "record_date": "2026-08-30",
+    "record_time": "22:18",
+    "systolic": 106,
+    "diastolic": 73,
+    "pulse": 86,
+    "note": "办公"
+  },
+  {
+    "id": 143,
+    "record_date": "2026-08-30",
+    "record_time": "23:15",
+    "systolic": 100,
+    "diastolic": 65,
+    "pulse": 69,
+    "note": "洗澡后"
+  },
+  {
+    "id": 144,
+    "record_date": "2026-08-31",
+    "record_time": "00:28",
+    "systolic": 107,
+    "diastolic": 68,
+    "pulse": 67,
+    "note": "睡觉醒来"
+  },
+  {
+    "id": 145,
+    "record_date": "2026-08-31",
+    "record_time": "03:49",
+    "systolic": 122,
+    "diastolic": 83,
+    "pulse": 64,
+    "note": ""
+  },
+  {
+    "id": 146,
+    "record_date": "2026-08-31",
+    "record_time": "05:01",
+    "systolic": 123,
+    "diastolic": 81,
+    "pulse": 62,
+    "note": ""
+  },
+  {
+    "id": 147,
+    "record_date": "2026-08-31",
+    "record_time": "05:39",
+    "systolic": 124,
+    "diastolic": 76,
+    "pulse": 61,
+    "note": ""
+  },
+  {
+    "id": 148,
+    "record_date": "2026-08-31",
+    "record_time": "08:35",
+    "systolic": 113,
+    "diastolic": 71,
+    "pulse": 87,
+    "note": "办公室"
+  },
+  {
+    "id": 149,
+    "record_date": "2026-08-31",
+    "record_time": "13:21",
+    "systolic": 115,
+    "diastolic": 85,
+    "pulse": 76,
+    "note": ""
+  },
+  {
+    "id": 150,
+    "record_date": "2026-08-31",
+    "record_time": "23:23",
+    "systolic": 107,
+    "diastolic": 67,
+    "pulse": 67,
     "note": ""
   }
 ]
