@@ -1312,5 +1312,14 @@
     "diastolic": 84,
     "pulse": 81,
     "note": ""
+  },
+  {
+    "id": 156,
+    "record_date": "2026-09-02",
+    "record_time": "01:21",
+    "systolic": 125,
+    "diastolic": 75,
+    "pulse": 84,
+    "note": "从父家到医院"
   }
 ]
