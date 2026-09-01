@@ -1267,5 +1267,32 @@
     "diastolic": 67,
     "pulse": 67,
     "note": ""
+  },
+  {
+    "id": 151,
+    "record_date": "2026-09-01",
+    "record_time": "00:52",
+    "systolic": 118,
+    "diastolic": 78,
+    "pulse": 60,
+    "note": ""
+  },
+  {
+    "id": 152,
+    "record_date": "2026-09-01",
+    "record_time": "05:59",
+    "systolic": 130,
+    "diastolic": 85,
+    "pulse": 64,
+    "note": ""
+  },
+  {
+    "id": 153,
+    "record_date": "2026-09-01",
+    "record_time": "18:03",
+    "systolic": 113,
+    "diastolic": 64,
+    "pulse": 86,
+    "note": "父家到医院"
   }
 ]
