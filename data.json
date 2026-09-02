@@ -1393,5 +1393,14 @@
     "diastolic": 71,
     "pulse": 70,
     "note": ""
+  },
+  {
+    "id": 165,
+    "record_date": "2026-09-03",
+    "record_time": "02:27",
+    "systolic": 111,
+    "diastolic": 78,
+    "pulse": 76,
+    "note": "从医院到家"
   }
 ]
