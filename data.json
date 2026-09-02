@@ -1330,5 +1330,32 @@
     "diastolic": 73,
     "pulse": 70,
     "note": ""
+  },
+  {
+    "id": 158,
+    "record_date": "2026-09-02",
+    "record_time": "06:04",
+    "systolic": 114,
+    "diastolic": 78,
+    "pulse": 80,
+    "note": "起床"
+  },
+  {
+    "id": 159,
+    "record_date": "2026-09-02",
+    "record_time": "06:37",
+    "systolic": 134,
+    "diastolic": 80,
+    "pulse": 90,
+    "note": ""
+  },
+  {
+    "id": 160,
+    "record_date": "2026-09-02",
+    "record_time": "08:26",
+    "systolic": 121,
+    "diastolic": 70,
+    "pulse": 87,
+    "note": ""
   }
 ]
