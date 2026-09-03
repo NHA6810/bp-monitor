@@ -1402,5 +1402,14 @@
     "diastolic": 78,
     "pulse": 76,
     "note": "从医院到家"
+  },
+  {
+    "id": 166,
+    "record_date": "2026-09-03",
+    "record_time": "08:13",
+    "systolic": 116,
+    "diastolic": 66,
+    "pulse": 87,
+    "note": ""
   }
 ]
