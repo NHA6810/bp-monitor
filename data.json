@@ -1447,5 +1447,14 @@
     "diastolic": 78,
     "pulse": 80,
     "note": ""
+  },
+  {
+    "id": 171,
+    "record_date": "2026-09-04",
+    "record_time": "01:19",
+    "systolic": 127,
+    "diastolic": 82,
+    "pulse": 82,
+    "note": ""
   }
 ]
