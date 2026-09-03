@@ -1411,5 +1411,14 @@
     "diastolic": 66,
     "pulse": 87,
     "note": ""
+  },
+  {
+    "id": 167,
+    "record_date": "2026-09-03",
+    "record_time": "10:31",
+    "systolic": 115,
+    "diastolic": 74,
+    "pulse": 81,
+    "note": ""
   }
 ]
