@@ -1492,5 +1492,50 @@
     "diastolic": 82,
     "pulse": 74,
     "note": ""
+  },
+  {
+    "id": 176,
+    "record_date": "2026-09-04",
+    "record_time": "21:53",
+    "systolic": 127,
+    "diastolic": 85,
+    "pulse": 66,
+    "note": ""
+  },
+  {
+    "id": 177,
+    "record_date": "2026-09-06",
+    "record_time": "03:58",
+    "systolic": 124,
+    "diastolic": 83,
+    "pulse": 68,
+    "note": ""
+  },
+  {
+    "id": 178,
+    "record_date": "2026-09-06",
+    "record_time": "02:59",
+    "systolic": 143,
+    "diastolic": 82,
+    "pulse": 82,
+    "note": "起床去医院"
+  },
+  {
+    "id": 179,
+    "record_date": "2026-09-06",
+    "record_time": "12:15",
+    "systolic": 120,
+    "diastolic": 62,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 180,
+    "record_date": "2026-09-07",
+    "record_time": "13:24",
+    "systolic": 140,
+    "diastolic": 88,
+    "pulse": 74,
+    "note": ""
   }
 ]
