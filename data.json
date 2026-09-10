@@ -1636,5 +1636,41 @@
     "diastolic": 88,
     "pulse": 67,
     "note": ""
+  },
+  {
+    "id": 192,
+    "record_date": "2026-09-10",
+    "record_time": "06:05",
+    "systolic": 130,
+    "diastolic": 85,
+    "pulse": 75,
+    "note": "醒来"
+  },
+  {
+    "id": 193,
+    "record_date": "2026-09-10",
+    "record_time": "06:28",
+    "systolic": 107,
+    "diastolic": 73,
+    "pulse": 87,
+    "note": "晨起空腹洗漱完毕"
+  },
+  {
+    "id": 194,
+    "record_date": "2026-09-10",
+    "record_time": "12:27",
+    "systolic": 117,
+    "diastolic": 78,
+    "pulse": 85,
+    "note": ""
+  },
+  {
+    "id": 195,
+    "record_date": "2026-09-10",
+    "record_time": "19:35",
+    "systolic": 116,
+    "diastolic": 78,
+    "pulse": 79,
+    "note": "晚饭后"
   }
 ]
