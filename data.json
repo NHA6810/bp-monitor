@@ -1717,5 +1717,14 @@
     "diastolic": 86,
     "pulse": 68,
     "note": "长途车上"
+  },
+  {
+    "id": 201,
+    "record_date": "2026-09-11",
+    "record_time": "20:07",
+    "systolic": 126,
+    "diastolic": 84,
+    "pulse": 66,
+    "note": ""
   }
 ]
