@@ -1699,5 +1699,23 @@
     "diastolic": 84,
     "pulse": 77,
     "note": "起床"
+  },
+  {
+    "id": 199,
+    "record_date": "2026-09-11",
+    "record_time": "16:56",
+    "systolic": 114,
+    "diastolic": 80,
+    "pulse": 88,
+    "note": "到达新城汽车站"
+  },
+  {
+    "id": 200,
+    "record_date": "2026-09-11",
+    "record_time": "18:06",
+    "systolic": 125,
+    "diastolic": 86,
+    "pulse": 68,
+    "note": "长途车上"
   }
 ]
