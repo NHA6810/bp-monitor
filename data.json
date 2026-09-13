@@ -1726,5 +1726,50 @@
     "diastolic": 84,
     "pulse": 66,
     "note": ""
+  },
+  {
+    "id": 202,
+    "record_date": "2026-09-12",
+    "record_time": "03:25",
+    "systolic": 111,
+    "diastolic": 73,
+    "pulse": 70,
+    "note": "小便"
+  },
+  {
+    "id": 203,
+    "record_date": "2026-09-12",
+    "record_time": "11:00",
+    "systolic": 102,
+    "diastolic": 70,
+    "pulse": 80,
+    "note": ""
+  },
+  {
+    "id": 204,
+    "record_date": "2026-09-12",
+    "record_time": "16:16",
+    "systolic": 100,
+    "diastolic": 65,
+    "pulse": 88,
+    "note": ""
+  },
+  {
+    "id": 205,
+    "record_date": "2026-09-13",
+    "record_time": "06:40",
+    "systolic": 115,
+    "diastolic": 78,
+    "pulse": 81,
+    "note": "起床后洗漱完毕"
+  },
+  {
+    "id": 206,
+    "record_date": "2026-09-13",
+    "record_time": "18:07",
+    "systolic": 117,
+    "diastolic": 77,
+    "pulse": 81,
+    "note": "长途汽车上"
   }
 ]
