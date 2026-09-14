@@ -1825,5 +1825,23 @@
     "diastolic": 76,
     "pulse": 82,
     "note": "晚饭后"
+  },
+  {
+    "id": 213,
+    "record_date": "2026-09-14",
+    "record_time": "23:30",
+    "systolic": 105,
+    "diastolic": 68,
+    "pulse": 76,
+    "note": "烤好面包躺在床上了"
+  },
+  {
+    "id": 214,
+    "record_date": "2026-09-15",
+    "record_time": "03:58",
+    "systolic": 114,
+    "diastolic": 80,
+    "pulse": 66,
+    "note": "小便"
   }
 ]
