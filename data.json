@@ -1843,5 +1843,50 @@
     "diastolic": 80,
     "pulse": 66,
     "note": "小便"
+  },
+  {
+    "id": 215,
+    "record_date": "2026-09-15",
+    "record_time": "06:01",
+    "systolic": 128,
+    "diastolic": 89,
+    "pulse": 67,
+    "note": "醒来"
+  },
+  {
+    "id": 216,
+    "record_date": "2026-09-15",
+    "record_time": "13:29",
+    "systolic": 124,
+    "diastolic": 82,
+    "pulse": 79,
+    "note": "午饭后"
+  },
+  {
+    "id": 217,
+    "record_date": "2026-09-15",
+    "record_time": "19:31",
+    "systolic": 121,
+    "diastolic": 77,
+    "pulse": 83,
+    "note": "晚餐后"
+  },
+  {
+    "id": 218,
+    "record_date": "2026-09-16",
+    "record_time": "02:02",
+    "systolic": 113,
+    "diastolic": 77,
+    "pulse": 65,
+    "note": "醒来"
+  },
+  {
+    "id": 219,
+    "record_date": "2026-09-16",
+    "record_time": "05:17",
+    "systolic": 116,
+    "diastolic": 81,
+    "pulse": 62,
+    "note": "醒来小便后"
   }
 ]
