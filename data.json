@@ -1888,5 +1888,23 @@
     "diastolic": 81,
     "pulse": 62,
     "note": "醒来小便后"
+  },
+  {
+    "id": 220,
+    "record_date": "2026-09-16",
+    "record_time": "06:11",
+    "systolic": 126,
+    "diastolic": 88,
+    "pulse": 68,
+    "note": "准备起床"
+  },
+  {
+    "id": 221,
+    "record_date": "2026-09-16",
+    "record_time": "07:35",
+    "systolic": 109,
+    "diastolic": 76,
+    "pulse": 77,
+    "note": "早饭后"
   }
 ]
