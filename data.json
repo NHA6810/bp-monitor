@@ -1951,5 +1951,131 @@
     "diastolic": 86,
     "pulse": 67,
     "note": "醒了小便"
+  },
+  {
+    "id": 227,
+    "record_date": "2026-09-17",
+    "record_time": "04:15",
+    "systolic": 135,
+    "diastolic": 84,
+    "pulse": 56,
+    "note": ""
+  },
+  {
+    "id": 228,
+    "record_date": "2026-09-17",
+    "record_time": "05:27",
+    "systolic": 137,
+    "diastolic": 82,
+    "pulse": 76,
+    "note": " get up from bed"
+  },
+  {
+    "id": 229,
+    "record_date": "2026-09-17",
+    "record_time": "06:03",
+    "systolic": 125,
+    "diastolic": 85,
+    "pulse": 85,
+    "note": "晨起空腹烤面包"
+  },
+  {
+    "id": 230,
+    "record_date": "2026-09-17",
+    "record_time": "10:01",
+    "systolic": 123,
+    "diastolic": 78,
+    "pulse": 71,
+    "note": ""
+  },
+  {
+    "id": 231,
+    "record_date": "2026-09-17",
+    "record_time": "16:41",
+    "systolic": 140,
+    "diastolic": 91,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 232,
+    "record_date": "2026-09-17",
+    "record_time": "20:59",
+    "systolic": 109,
+    "diastolic": 73,
+    "pulse": 88,
+    "note": ""
+  },
+  {
+    "id": 233,
+    "record_date": "2026-09-17",
+    "record_time": "22:44",
+    "systolic": 100,
+    "diastolic": 65,
+    "pulse": 67,
+    "note": ""
+  },
+  {
+    "id": 234,
+    "record_date": "2026-09-18",
+    "record_time": "03:46",
+    "systolic": 121,
+    "diastolic": 81,
+    "pulse": 59,
+    "note": "小便"
+  },
+  {
+    "id": 235,
+    "record_date": "2026-09-18",
+    "record_time": "06:08",
+    "systolic": 125,
+    "diastolic": 84,
+    "pulse": 62,
+    "note": "准备起床"
+  },
+  {
+    "id": 236,
+    "record_date": "2026-09-18",
+    "record_time": "06:16",
+    "systolic": 110,
+    "diastolic": 77,
+    "pulse": 74,
+    "note": "起床"
+  },
+  {
+    "id": 237,
+    "record_date": "2026-09-18",
+    "record_time": "07:22",
+    "systolic": 123,
+    "diastolic": 85,
+    "pulse": 84,
+    "note": "到公司"
+  },
+  {
+    "id": 238,
+    "record_date": "2026-09-18",
+    "record_time": "14:03",
+    "systolic": 101,
+    "diastolic": 70,
+    "pulse": 77,
+    "note": ""
+  },
+  {
+    "id": 239,
+    "record_date": "2026-09-18",
+    "record_time": "18:19",
+    "systolic": 113,
+    "diastolic": 78,
+    "pulse": 69,
+    "note": "回上海的大巴"
+  },
+  {
+    "id": 240,
+    "record_date": "2026-09-18",
+    "record_time": "20:07",
+    "systolic": 120,
+    "diastolic": 79,
+    "pulse": 59,
+    "note": "大巴上"
   }
 ]
