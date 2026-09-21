@@ -2230,5 +2230,23 @@
     "diastolic": 68,
     "pulse": 69,
     "note": "晚上洗澡后躺下"
+  },
+  {
+    "id": 258,
+    "record_date": "2026-09-22",
+    "record_time": "04:21",
+    "systolic": 122,
+    "diastolic": 81,
+    "pulse": 79,
+    "note": "醒来小便后"
+  },
+  {
+    "id": 259,
+    "record_date": "2026-09-22",
+    "record_time": "06:11",
+    "systolic": 113,
+    "diastolic": 79,
+    "pulse": 73,
+    "note": "准备起床"
   }
 ]
