@@ -1798,5 +1798,14 @@
     "diastolic": 71,
     "pulse": 83,
     "note": "起床，坐位"
+  },
+  {
+    "id": 210,
+    "record_date": "2026-09-22",
+    "record_time": "19:02",
+    "systolic": 102,
+    "diastolic": 61,
+    "pulse": 83,
+    "note": ""
   }
 ]
