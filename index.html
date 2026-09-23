@@ -152,7 +152,7 @@
     <div id="sync-modal" class="modal-overlay hidden" onclick="if(event.target===this)closeSyncModal()"><div class="modal">
         <div class="modal-title"> 数据同步</div>
         <div class="form-group"><label class="form-label">GitHub Token</label><input type="password" id="github-token" class="form-input" placeholder="ghp_xxxxxxxxxxxx"></div>
-        <p style="font-size:12px;color:#8B7355;margin-bottom:16px;">💡 Token 用于访问 GitHub 仓库，不会上传到任何服务器</p>
+        <p style="font-size:12px;color:#8B7355;margin-bottom:16px;">💡 Token 用于访问 GitHub 仓库，不会上传到任何服务器；保存一次后，每次录入血压数据将自动上传到 GitHub</p>
         <button class="btn-primary" onclick="syncToGitHub()" style="margin-bottom:10px;">⬆️ 上传到 GitHub</button>
         <button class="btn-primary" onclick="syncFromGitHub()" style="background:#2A9D8F;margin-bottom:10px;">⬇️ 从 GitHub 恢复</button>
         <button class="btn-secondary" onclick="closeSyncModal()">取消</button>
@@ -199,13 +199,13 @@
         function openAddModal() { editingId = null; document.getElementById('modal-title').textContent = '新增记录'; const now = new Date(); document.getElementById('edit-date').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'); document.getElementById('edit-time').value = now.toTimeString().slice(0, 5); document.getElementById('edit-systolic').value = ''; document.getElementById('edit-diastolic').value = ''; document.getElementById('edit-pulse').value = ''; document.getElementById('edit-note').value = ''; document.getElementById('edit-modal').classList.remove('hidden'); }
         function openEditModal(id) { const r = readings.find(x => x.id === id); if (!r) return; editingId = id; document.getElementById('modal-title').textContent = '编辑记录'; document.getElementById('edit-date').value = r.record_date; document.getElementById('edit-time').value = r.record_time; document.getElementById('edit-systolic').value = r.systolic; document.getElementById('edit-diastolic').value = r.diastolic; document.getElementById('edit-pulse').value = r.pulse; document.getElementById('edit-note').value = r.note || ''; document.getElementById('edit-modal').classList.remove('hidden'); }
         function closeModal() { document.getElementById('edit-modal').classList.add('hidden'); }
-        function saveReading() { const date = document.getElementById('edit-date').value; const time = document.getElementById('edit-time').value; const systolic = parseInt(document.getElementById('edit-systolic').value); const diastolic = parseInt(document.getElementById('edit-diastolic').value); const pulse = parseInt(document.getElementById('edit-pulse').value); const note = document.getElementById('edit-note').value; if (!date || !time || !systolic || !diastolic || !pulse) { alert('请填写完整数据'); return; } if (editingId) { const idx = readings.findIndex(x => x.id === editingId); if (idx >= 0) readings[idx] = { ...readings[idx], record_date: date, record_time: time, systolic, diastolic, pulse, note }; } else { const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: date, record_time: time, systolic, diastolic, pulse, note }); } saveData(); renderList(); closeModal(); }
+        function saveReading() { const date = document.getElementById('edit-date').value; const time = document.getElementById('edit-time').value; const systolic = parseInt(document.getElementById('edit-systolic').value); const diastolic = parseInt(document.getElementById('edit-diastolic').value); const pulse = parseInt(document.getElementById('edit-pulse').value); const note = document.getElementById('edit-note').value; if (!date || !time || !systolic || !diastolic || !pulse) { alert('请填写完整数据'); return; } if (editingId) { const idx = readings.findIndex(x => x.id === editingId); if (idx >= 0) readings[idx] = { ...readings[idx], record_date: date, record_time: time, systolic, diastolic, pulse, note }; } else { const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: date, record_time: time, systolic, diastolic, pulse, note }); } saveData(); renderList(); closeModal(); autoSyncToGitHub(); }
         function openNoteModal(id) { noteItemId = id; const r = readings.find(x => x.id === id); document.getElementById('note-text').value = r?.note || ''; document.getElementById('note-modal').classList.remove('hidden'); }
         function closeNoteModal() { document.getElementById('note-modal').classList.add('hidden'); }
         function updateResDiff() { const s = parseInt(document.getElementById('res-systolic').value); const d = parseInt(document.getElementById('res-diastolic').value); const row = document.getElementById('res-diff-row'); if (s && d) { document.getElementById('res-diff-value').textContent = s - d; row.style.display = 'flex'; } else { row.style.display = 'none'; } }
         function updateFormDiff() { const s = parseInt(document.getElementById('edit-systolic').value); const d = parseInt(document.getElementById('edit-diastolic').value); const group = document.getElementById('form-diff-group'); if (s && d) { document.getElementById('form-diff-value').textContent = s - d; group.style.display = 'block'; } else { group.style.display = 'none'; } }
-        function saveNote() { const idx = readings.findIndex(x => x.id === noteItemId); if (idx >= 0) { readings[idx].note = document.getElementById('note-text').value; saveData(); renderList(); } closeNoteModal(); }
-        function deleteReading(id) { if (!confirm('确定要删除这条记录吗？')) return; readings = readings.filter(x => x.id !== id); saveData(); renderList(); }
+        function saveNote() { const idx = readings.findIndex(x => x.id === noteItemId); if (idx >= 0) { readings[idx].note = document.getElementById('note-text').value; saveData(); renderList(); } closeNoteModal(); autoSyncToGitHub(); }
+        function deleteReading(id) { if (!confirm('确定要删除这条记录吗？')) return; readings = readings.filter(x => x.id !== id); saveData(); renderList(); autoSyncToGitHub(); }
 
         function parseBPFromText(text) {
             let systolic = null, diastolic = null, pulse = null;
@@ -412,7 +412,7 @@
         function reOCR() { if (!currentImageData) return; document.getElementById('ocr-progress').classList.remove('hidden'); document.getElementById('camera-data').classList.add('hidden'); doOCR(currentImageData, currentRotation); }
         function resetCamera() { document.getElementById('camera-result').classList.add('hidden'); document.getElementById('camera-data').classList.add('hidden'); document.getElementById('ocr-progress').classList.add('hidden'); currentImageData = null; currentRotation = 0; }
 
-        function saveCameraReading() { const systolic = parseInt(document.getElementById('res-systolic').value); const diastolic = parseInt(document.getElementById('res-diastolic').value); const pulse = parseInt(document.getElementById('res-pulse').value); if (!systolic || !diastolic || !pulse) { alert('请填写完整的血压数据'); return; } const now = new Date(); const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'), record_time: now.toTimeString().slice(0, 5), systolic, diastolic, pulse, note: '' }); saveData(); alert('✅ 保存成功！'); resetCamera(); document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.content').forEach(c => c.classList.add('hidden')); document.querySelectorAll('.tab')[0].classList.add('active'); document.getElementById('tab-list').classList.remove('hidden'); renderList(); }
+        function saveCameraReading() { const systolic = parseInt(document.getElementById('res-systolic').value); const diastolic = parseInt(document.getElementById('res-diastolic').value); const pulse = parseInt(document.getElementById('res-pulse').value); if (!systolic || !diastolic || !pulse) { alert('请填写完整的血压数据'); return; } const now = new Date(); const maxId = readings.reduce((max, r) => Math.max(max, r.id), 0); readings.push({ id: maxId + 1, record_date: now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0'), record_time: now.toTimeString().slice(0, 5), systolic, diastolic, pulse, note: '' }); saveData(); alert('✅ 保存成功！'); resetCamera(); document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.content').forEach(c => c.classList.add('hidden')); document.querySelectorAll('.tab')[0].classList.add('active'); document.getElementById('tab-list').classList.remove('hidden'); renderList(); autoSyncToGitHub(); }
 
         function loadAnalysis() { const startDate = document.getElementById('start-date').value; const endDate = document.getElementById('end-date').value; if (!startDate || !endDate) return; const filtered = readings.filter(r => r.record_date >= startDate && r.record_date <= endDate).sort((a, b) => a.record_date.localeCompare(b.record_date) || a.record_time.localeCompare(b.record_time)); if (filtered.length === 0) { document.getElementById('analysis-content').innerHTML = '<div class="empty-state"><div class="icon">📊</div><p>该日期范围内暂无数据</p></div>'; return; } const avgSys = Math.round(filtered.reduce((s, r) => s + r.systolic, 0) / filtered.length); const avgDia = Math.round(filtered.reduce((s, r) => s + r.diastolic, 0) / filtered.length); const avgPul = Math.round(filtered.reduce((s, r) => s + r.pulse, 0) / filtered.length); let html = `<div class="card"><h3 style="margin-bottom:16px;"> 统计概览</h3><div class="stats-grid"><div class="stat-card"><div class="stat-value">${filtered.length}</div><div class="stat-label">记录次数</div></div><div class="stat-card"><div class="stat-value">${avgSys}/${avgDia}</div><div class="stat-label">平均血压</div></div><div class="stat-card"><div class="stat-value">${Math.max(...filtered.map(r=>r.systolic))}</div><div class="stat-label">最高收缩压</div></div><div class="stat-card"><div class="stat-value">${Math.min(...filtered.map(r=>r.systolic))}</div><div class="stat-label">最低收缩压</div></div><div class="stat-card"><div class="stat-value">${Math.round(filtered.reduce((s, r) => s + (r.systolic - r.diastolic), 0) / filtered.length)}</div><div class="stat-label">平均脉压差</div></div></div></div><div class="card"><h3 style="margin-bottom:16px;">📊 详细分析</h3><table class="analysis-table"><tr><th>指标</th><th>单位</th><th>平均值</th><th>最高/最低</th></tr><tr><td>收缩压</td><td>mmHg</td><td>${avgSys}</td><td>${Math.max(...filtered.map(r=>r.systolic))}/${Math.min(...filtered.map(r=>r.systolic))}</td></tr><tr><td>舒张压</td><td>mmHg</td><td>${avgDia}</td><td>${Math.max(...filtered.map(r=>r.diastolic))}/${Math.min(...filtered.map(r=>r.diastolic))}</td></tr><tr><td>脉搏</td><td>bpm</td><td>${avgPul}</td><td>${Math.max(...filtered.map(r=>r.pulse))}/${Math.min(...filtered.map(r=>r.pulse))}</td></tr><tr><td>脉压差</td><td>mmHg</td><td>${Math.round(filtered.reduce((s, r) => s + (r.systolic - r.diastolic), 0) / filtered.length)}</td><td>${Math.max(...filtered.map(r=>r.systolic-r.diastolic))}/${Math.min(...filtered.map(r=>r.systolic-r.diastolic))}</td></tr></table></div><div class="card"><h3 style="margin-bottom:16px;">📈 趋势图</h3><div class="chart-container"><canvas id="trendChart"></canvas></div></div><div class="card"><h3 style="margin-bottom:16px;">📤 导出报表</h3><div class="export-btns"><button class="btn-email" onclick="sendEmail()">📧 邮件发送</button><button class="btn-share" onclick="shareFile()">📤 分享/下载</button></div></div>`; document.getElementById('analysis-content').innerHTML = html; setTimeout(() => { const ctx = document.getElementById('trendChart'); if (ctx && typeof Chart !== 'undefined') { if (chartInstance) chartInstance.destroy(); chartInstance = new Chart(ctx, { type: 'line', data: { labels: filtered.map(r => r.record_date.slice(5)), datasets: [{ label: '收缩压', data: filtered.map(r => r.systolic), borderColor: '#F4735C', backgroundColor: 'rgba(244,115,92,0.1)', tension: 0.3, fill: true }, { label: '舒张压', data: filtered.map(r => r.diastolic), borderColor: '#2A9D8F', backgroundColor: 'rgba(42,157,143,0.1)', tension: 0.3, fill: true }, { label: '脉搏', data: filtered.map(r => r.pulse), borderColor: '#E9A820', backgroundColor: 'rgba(233,168,32,0.1)', tension: 0.3, fill: true }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } } }); } }, 100); }
 
@@ -427,13 +427,12 @@
         function openSyncModal() { document.getElementById('sync-modal').classList.remove('hidden'); const savedToken = localStorage.getItem('github_token'); if (savedToken) document.getElementById('github-token').value = savedToken; }
         function closeSyncModal() { document.getElementById('sync-modal').classList.add('hidden'); }
 
-        async function syncToGitHub() {
-            const token = document.getElementById('github-token').value.trim();
-            if (!token) { alert('请输入 GitHub Token'); return; }
-            localStorage.setItem('github_token', token);
+        async function uploadToGitHub(token, silent) {
+            const t = token || localStorage.getItem('github_token');
+            if (!t) { if (!silent) alert('请输入 GitHub Token'); return false; }
             try {
                 const resp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', {
-                    headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+                    headers: { 'Authorization': `token ${t}`, 'Accept': 'application/vnd.github.v3+json' }
                 });
                 const data = await resp.json();
                 const sha = data.sha;
@@ -443,28 +442,47 @@
                     const remoteContent = decodeURIComponent(escape(atob(data.content)));
                     const remoteData = JSON.parse(remoteContent);
                     if (JSON.stringify(readings) === JSON.stringify(remoteData)) {
-                        alert('ℹ️ 数据与 GitHub 一致，无需上传');
-                        closeSyncModal();
-                        return;
+                        if (!silent) alert('ℹ️ 数据与 GitHub 一致，无需上传');
+                        return true;
                     }
                 } catch (e) { /* 比较失败则继续上传 */ }
 
                 const content = btoa(unescape(encodeURIComponent(JSON.stringify(readings, null, 2))));
                 const updateResp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', {
                     method: 'PUT',
-                    headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+                    headers: { 'Authorization': `token ${t}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
                     body: JSON.stringify({ message: 'sync: 从手机同步数据 ' + new Date().toISOString(), content, sha })
                 });
                 if (updateResp.ok) {
-                    alert('✅ 数据已成功上传到 GitHub！');
-                    closeSyncModal();
+                    if (!silent) alert('✅ 数据已成功上传到 GitHub！');
+                    return true;
                 } else {
                     const err = await updateResp.json();
-                    alert(' 上传失败：' + (err.message || '未知错误'));
+                    if (!silent) alert(' 上传失败：' + (err.message || '未知错误'));
+                    return false;
                 }
             } catch (err) {
-                alert('❌ 同步失败：' + err.message);
+                if (!silent) alert('❌ 同步失败：' + err.message);
+                return false;
             }
+        }
+
+        async function syncToGitHub() {
+            const token = document.getElementById('github-token').value.trim();
+            if (!token) { alert('请输入 GitHub Token'); return; }
+            localStorage.setItem('github_token', token);
+            const ok = await uploadToGitHub(token, false);
+            if (ok) closeSyncModal();
+        }
+
+        // 自动上传：保存/修改/删除血压数据后，自动同步到 GitHub（需已配置 Token）
+        async function autoSyncToGitHub() {
+            const token = localStorage.getItem('github_token');
+            if (!token) {
+                console.warn('未配置 GitHub Token，自动上传已跳过。请先在“数据同步”中输入一次 Token。');
+                return;
+            }
+            await uploadToGitHub(token, true);
         }
 
         async function syncFromGitHub() { const token = document.getElementById('github-token').value.trim(); if (!token) { alert('请输入 GitHub Token'); return; } localStorage.setItem('github_token', token); try { const resp = await fetch('https://api.github.com/repos/NHA6810/bp-monitor/contents/data.json', { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } }); const data = await resp.json(); const content = decodeURIComponent(escape(atob(data.content))); readings = JSON.parse(content); saveData(); renderList(); alert('✅ 数据已从 GitHub 恢复！共 ' + readings.length + ' 条记录'); closeSyncModal(); } catch (err) { alert('❌ 恢复失败：' + err.message); } }
