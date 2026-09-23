@@ -1888,5 +1888,14 @@
     "diastolic": 97,
     "pulse": 62,
     "note": "晚上小便，昨天没有吃药"
+  },
+  {
+    "id": 220,
+    "record_date": "2026-09-24",
+    "record_time": "06:36",
+    "systolic": 121,
+    "diastolic": 84,
+    "pulse": 78,
+    "note": "早晨洗漱后空腹"
   }
 ]
