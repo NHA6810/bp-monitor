@@ -1870,5 +1870,14 @@
     "diastolic": 94,
     "pulse": 63,
     "note": "闹铃醒来，昨天没有吃药"
+  },
+  {
+    "id": 218,
+    "record_date": "2026-09-24",
+    "record_time": "06:13",
+    "systolic": 129,
+    "diastolic": 88,
+    "pulse": 61,
+    "note": "晚上小便后"
   }
 ]
