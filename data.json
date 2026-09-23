@@ -1852,5 +1852,14 @@
     "diastolic": 78,
     "pulse": 80,
     "note": "运动后"
+  },
+  {
+    "id": 216,
+    "record_date": "2026-09-24",
+    "record_time": "06:11",
+    "systolic": 126,
+    "diastolic": 83,
+    "pulse": 63,
+    "note": "准备起床"
   }
 ]
