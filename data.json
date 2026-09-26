@@ -1942,5 +1942,14 @@
     "diastolic": 72,
     "pulse": 67,
     "note": "躺下"
+  },
+  {
+    "id": 226,
+    "record_date": "2026-09-27",
+    "record_time": "05:12",
+    "systolic": 131,
+    "diastolic": 89,
+    "pulse": 63,
+    "note": ""
   }
 ]
