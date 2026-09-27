@@ -1960,5 +1960,14 @@
     "diastolic": 86,
     "pulse": 62,
     "note": "准备起床"
+  },
+  {
+    "id": 228,
+    "record_date": "2026-09-27",
+    "record_time": "22:47",
+    "systolic": 96,
+    "diastolic": 64,
+    "pulse": 82,
+    "note": ""
   }
 ]
