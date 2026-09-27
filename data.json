@@ -1978,5 +1978,14 @@
     "diastolic": 85,
     "pulse": 67,
     "note": ""
+  },
+  {
+    "id": 230,
+    "record_date": "2026-09-28",
+    "record_time": "07:48",
+    "systolic": 121,
+    "diastolic": 89,
+    "pulse": 112,
+    "note": "早饭中"
   }
 ]
