@@ -1996,5 +1996,14 @@
     "diastolic": 70,
     "pulse": 83,
     "note": "饭后"
+  },
+  {
+    "id": 232,
+    "record_date": "2026-09-28",
+    "record_time": "19:13",
+    "systolic": 96,
+    "diastolic": 67,
+    "pulse": 89,
+    "note": "到家"
   }
 ]
