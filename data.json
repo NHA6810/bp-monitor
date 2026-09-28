@@ -2014,5 +2014,14 @@
     "diastolic": 71,
     "pulse": 90,
     "note": "洗澡后"
+  },
+  {
+    "id": 234,
+    "record_date": "2026-09-29",
+    "record_time": "07:24",
+    "systolic": 107,
+    "diastolic": 78,
+    "pulse": 79,
+    "note": "起床后洗漱完毕"
   }
 ]
