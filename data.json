@@ -2005,5 +2005,14 @@
     "diastolic": 67,
     "pulse": 89,
     "note": "到家"
+  },
+  {
+    "id": 233,
+    "record_date": "2026-09-28",
+    "record_time": "22:12",
+    "systolic": 99,
+    "diastolic": 71,
+    "pulse": 90,
+    "note": "洗澡后"
   }
 ]
