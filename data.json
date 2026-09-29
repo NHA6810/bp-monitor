@@ -2059,5 +2059,14 @@
     "diastolic": 78,
     "pulse": 71,
     "note": "起床"
+  },
+  {
+    "id": 239,
+    "record_date": "2026-09-30",
+    "record_time": "06:33",
+    "systolic": 119,
+    "diastolic": 80,
+    "pulse": 72,
+    "note": "洗漱完毕，空腹"
   }
 ]
