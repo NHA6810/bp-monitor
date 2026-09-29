@@ -2050,5 +2050,14 @@
     "diastolic": 68,
     "pulse": 69,
     "note": ""
+  },
+  {
+    "id": 238,
+    "record_date": "2026-09-30",
+    "record_time": "06:03",
+    "systolic": 110,
+    "diastolic": 78,
+    "pulse": 71,
+    "note": "起床"
   }
 ]
