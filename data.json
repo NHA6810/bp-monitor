@@ -2068,5 +2068,14 @@
     "diastolic": 80,
     "pulse": 72,
     "note": "洗漱完毕，空腹"
+  },
+  {
+    "id": 240,
+    "record_date": "2026-09-30",
+    "record_time": "21:55",
+    "systolic": 124,
+    "diastolic": 83,
+    "pulse": 80,
+    "note": ""
   }
 ]
