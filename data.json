@@ -2113,5 +2113,14 @@
     "diastolic": 82,
     "pulse": 82,
     "note": "骑行运动回到家"
+  },
+  {
+    "id": 245,
+    "record_date": "2026-10-02",
+    "record_time": "05:16",
+    "systolic": 127,
+    "diastolic": 86,
+    "pulse": 61,
+    "note": ""
   }
 ]
