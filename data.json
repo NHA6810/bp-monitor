@@ -2104,5 +2104,14 @@
     "diastolic": 75,
     "pulse": 79,
     "note": "晚饭后"
+  },
+  {
+    "id": 244,
+    "record_date": "2026-10-01",
+    "record_time": "22:13",
+    "systolic": 123,
+    "diastolic": 82,
+    "pulse": 82,
+    "note": ""
   }
 ]
