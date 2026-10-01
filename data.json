@@ -2095,5 +2095,14 @@
     "diastolic": 88,
     "pulse": 64,
     "note": ""
+  },
+  {
+    "id": 243,
+    "record_date": "2026-10-01",
+    "record_time": "19:15",
+    "systolic": 108,
+    "diastolic": 75,
+    "pulse": 79,
+    "note": "晚饭后"
   }
 ]
