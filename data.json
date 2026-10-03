@@ -2131,5 +2131,14 @@
     "diastolic": 77,
     "pulse": 69,
     "note": "起床"
+  },
+  {
+    "id": 247,
+    "record_date": "2026-10-03",
+    "record_time": "09:06",
+    "systolic": 121,
+    "diastolic": 80,
+    "pulse": 77,
+    "note": "地铁-大场镇下车"
   }
 ]
