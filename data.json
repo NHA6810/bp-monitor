@@ -2167,5 +2167,14 @@
     "diastolic": 91,
     "pulse": 67,
     "note": ""
+  },
+  {
+    "id": 251,
+    "record_date": "2026-10-05",
+    "record_time": "06:33",
+    "systolic": 126,
+    "diastolic": 85,
+    "pulse": 73,
+    "note": "起床"
   }
 ]
