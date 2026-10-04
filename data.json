@@ -2149,5 +2149,14 @@
     "diastolic": 82,
     "pulse": 76,
     "note": "早餐后"
+  },
+  {
+    "id": 249,
+    "record_date": "2026-10-04",
+    "record_time": "19:22",
+    "systolic": 122,
+    "diastolic": 75,
+    "pulse": 76,
+    "note": ""
   }
 ]
