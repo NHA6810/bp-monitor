@@ -2185,5 +2185,23 @@
     "diastolic": 87,
     "pulse": 73,
     "note": ""
+  },
+  {
+    "id": 253,
+    "record_date": "2026-10-05",
+    "record_time": "18:59",
+    "systolic": 111,
+    "diastolic": 71,
+    "pulse": 78,
+    "note": ""
+  },
+  {
+    "id": 254,
+    "record_date": "2026-10-05",
+    "record_time": "23:31",
+    "systolic": 126,
+    "diastolic": 86,
+    "pulse": 68,
+    "note": ""
   }
 ]
