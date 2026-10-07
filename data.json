@@ -2239,5 +2239,14 @@
     "diastolic": 86,
     "pulse": 75,
     "note": "洗漱完毕"
+  },
+  {
+    "id": 259,
+    "record_date": "2026-10-08",
+    "record_time": "05:35",
+    "systolic": 126,
+    "diastolic": 85,
+    "pulse": 68,
+    "note": ""
   }
 ]
