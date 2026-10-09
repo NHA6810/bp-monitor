@@ -2266,5 +2266,14 @@
     "diastolic": 77,
     "pulse": 70,
     "note": "起床洗漱后空腹"
+  },
+  {
+    "id": 262,
+    "record_date": "2026-10-09",
+    "record_time": "22:32",
+    "systolic": 106,
+    "diastolic": 71,
+    "pulse": 86,
+    "note": "洗澡后"
   }
 ]
