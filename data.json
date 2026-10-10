@@ -2275,5 +2275,14 @@
     "diastolic": 71,
     "pulse": 86,
     "note": "洗澡后"
+  },
+  {
+    "id": 263,
+    "record_date": "2026-10-10",
+    "record_time": "18:07",
+    "systolic": 118,
+    "diastolic": 75,
+    "pulse": 83,
+    "note": ""
   }
 ]
