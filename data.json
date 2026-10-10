@@ -2284,5 +2284,14 @@
     "diastolic": 75,
     "pulse": 83,
     "note": ""
+  },
+  {
+    "id": 264,
+    "record_date": "2026-10-10",
+    "record_time": "22:38",
+    "systolic": 110,
+    "diastolic": 74,
+    "pulse": 84,
+    "note": "晚上运动后洗完澡澡"
   }
 ]
