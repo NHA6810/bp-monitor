@@ -2329,5 +2329,14 @@
     "diastolic": 87,
     "pulse": 72,
     "note": "晚饭后"
+  },
+  {
+    "id": 269,
+    "record_date": "2026-10-14",
+    "record_time": "04:11",
+    "systolic": 116,
+    "diastolic": 81,
+    "pulse": 57,
+    "note": ""
   }
 ]
