@@ -2347,5 +2347,14 @@
     "diastolic": 83,
     "pulse": 73,
     "note": "晨起洗漱完毕"
+  },
+  {
+    "id": 271,
+    "record_date": "2026-10-14",
+    "record_time": "17:01",
+    "systolic": 130,
+    "diastolic": 85,
+    "pulse": 81,
+    "note": "到家做好晚饭"
   }
 ]
