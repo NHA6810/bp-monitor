@@ -2356,5 +2356,14 @@
     "diastolic": 85,
     "pulse": 81,
     "note": "到家做好晚饭"
+  },
+  {
+    "id": 272,
+    "record_date": "2026-10-14",
+    "record_time": "20:42",
+    "systolic": 122,
+    "diastolic": 79,
+    "pulse": 74,
+    "note": ""
   }
 ]
