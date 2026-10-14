@@ -2383,5 +2383,14 @@
     "diastolic": 92,
     "pulse": 65,
     "note": ""
+  },
+  {
+    "id": 275,
+    "record_date": "2026-10-15",
+    "record_time": "04:13",
+    "systolic": 131,
+    "diastolic": 94,
+    "pulse": 65,
+    "note": ""
   }
 ]
