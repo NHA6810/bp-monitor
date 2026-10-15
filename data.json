@@ -2419,5 +2419,14 @@
     "diastolic": 75,
     "pulse": 68,
     "note": ""
+  },
+  {
+    "id": 279,
+    "record_date": "2026-10-15",
+    "record_time": "22:20",
+    "systolic": 112,
+    "diastolic": 77,
+    "pulse": 71,
+    "note": ""
   }
 ]
