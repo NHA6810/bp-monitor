@@ -2464,5 +2464,14 @@
     "diastolic": 76,
     "pulse": 75,
     "note": "起床床边"
+  },
+  {
+    "id": 284,
+    "record_date": "2026-10-16",
+    "record_time": "13:25",
+    "systolic": 120,
+    "diastolic": 82,
+    "pulse": 82,
+    "note": ""
   }
 ]
