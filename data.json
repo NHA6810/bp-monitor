@@ -2491,5 +2491,14 @@
     "diastolic": 84,
     "pulse": 59,
     "note": ""
+  },
+  {
+    "id": 287,
+    "record_date": "2026-10-17",
+    "record_time": "06:32",
+    "systolic": 123,
+    "diastolic": 78,
+    "pulse": 82,
+    "note": "起床床边"
   }
 ]
