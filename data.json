@@ -2527,5 +2527,14 @@
     "diastolic": 82,
     "pulse": 66,
     "note": ""
+  },
+  {
+    "id": 291,
+    "record_date": "2026-10-18",
+    "record_time": "07:47",
+    "systolic": 120,
+    "diastolic": 78,
+    "pulse": 79,
+    "note": "晨起空腹"
   }
 ]
