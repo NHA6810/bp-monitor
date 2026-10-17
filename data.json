@@ -2500,5 +2500,14 @@
     "diastolic": 78,
     "pulse": 82,
     "note": "起床床边"
+  },
+  {
+    "id": 288,
+    "record_date": "2026-10-17",
+    "record_time": "20:10",
+    "systolic": 108,
+    "diastolic": 73,
+    "pulse": 77,
+    "note": "晚饭后"
   }
 ]
