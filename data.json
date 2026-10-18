@@ -2536,5 +2536,23 @@
     "diastolic": 78,
     "pulse": 79,
     "note": "晨起空腹"
+  },
+  {
+    "id": 292,
+    "record_date": "2026-10-18",
+    "record_time": "22:38",
+    "systolic": 118,
+    "diastolic": 83,
+    "pulse": 67,
+    "note": "上床睡觉"
+  },
+  {
+    "id": 293,
+    "record_date": "2026-10-19",
+    "record_time": "02:02",
+    "systolic": 150,
+    "diastolic": 98,
+    "pulse": 74,
+    "note": ""
   }
 ]
