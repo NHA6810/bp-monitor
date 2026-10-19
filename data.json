@@ -2590,5 +2590,14 @@
     "diastolic": 86,
     "pulse": 66,
     "note": "躺着"
+  },
+  {
+    "id": 298,
+    "record_date": "2026-10-20",
+    "record_time": "05:47",
+    "systolic": 114,
+    "diastolic": 77,
+    "pulse": 61,
+    "note": ""
   }
 ]
