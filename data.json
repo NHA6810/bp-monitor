@@ -2608,5 +2608,23 @@
     "diastolic": 74,
     "pulse": 68,
     "note": "坐起"
+  },
+  {
+    "id": 300,
+    "record_date": "2026-10-20",
+    "record_time": "12:55",
+    "systolic": 122,
+    "diastolic": 82,
+    "pulse": 79,
+    "note": "午餐运动后"
+  },
+  {
+    "id": 301,
+    "record_date": "2026-10-21",
+    "record_time": "06:03",
+    "systolic": 133,
+    "diastolic": 93,
+    "pulse": 71,
+    "note": "躺"
   }
 ]
