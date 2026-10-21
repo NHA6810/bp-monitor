@@ -2653,5 +2653,14 @@
     "diastolic": 83,
     "pulse": 68,
     "note": "小便后躺"
+  },
+  {
+    "id": 305,
+    "record_date": "2026-10-22",
+    "record_time": "06:11",
+    "systolic": 132,
+    "diastolic": 88,
+    "pulse": 63,
+    "note": "醒躺"
   }
 ]
