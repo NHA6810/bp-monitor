@@ -2662,5 +2662,14 @@
     "diastolic": 88,
     "pulse": 63,
     "note": "醒躺"
+  },
+  {
+    "id": 306,
+    "record_date": "2026-10-22",
+    "record_time": "17:40",
+    "systolic": 118,
+    "diastolic": 84,
+    "pulse": 84,
+    "note": ""
   }
 ]
