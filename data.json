@@ -2671,5 +2671,14 @@
     "diastolic": 84,
     "pulse": 84,
     "note": "做好晚饭"
+  },
+  {
+    "id": 307,
+    "record_date": "2026-10-23",
+    "record_time": "04:05",
+    "systolic": 113,
+    "diastolic": 75,
+    "pulse": 64,
+    "note": "躺"
   }
 ]
