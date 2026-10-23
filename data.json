@@ -2698,5 +2698,14 @@
     "diastolic": 73,
     "pulse": 83,
     "note": "座位"
+  },
+  {
+    "id": 310,
+    "record_date": "2026-10-24",
+    "record_time": "06:33",
+    "systolic": 95,
+    "diastolic": 72,
+    "pulse": 82,
+    "note": "坐位"
   }
 ]
