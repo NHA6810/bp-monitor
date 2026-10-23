@@ -2707,5 +2707,14 @@
     "diastolic": 72,
     "pulse": 82,
     "note": "坐位"
+  },
+  {
+    "id": 311,
+    "record_date": "2026-10-24",
+    "record_time": "06:35",
+    "systolic": 134,
+    "diastolic": 92,
+    "pulse": 76,
+    "note": "躺回床上"
   }
 ]
