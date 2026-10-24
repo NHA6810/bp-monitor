@@ -2734,5 +2734,14 @@
     "diastolic": 79,
     "pulse": 92,
     "note": "运动后"
+  },
+  {
+    "id": 314,
+    "record_date": "2026-10-24",
+    "record_time": "23:01",
+    "systolic": 125,
+    "diastolic": 80,
+    "pulse": 67,
+    "note": "躺"
   }
 ]
