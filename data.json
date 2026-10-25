@@ -2779,5 +2779,14 @@
     "diastolic": 87,
     "pulse": 69,
     "note": " 躺"
+  },
+  {
+    "id": 319,
+    "record_date": "2026-10-26",
+    "record_time": "06:39",
+    "systolic": 120,
+    "diastolic": 82,
+    "pulse": 88,
+    "note": "晨起空腹运动后"
   }
 ]
