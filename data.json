@@ -2752,5 +2752,14 @@
     "diastolic": 86,
     "pulse": 89,
     "note": "坐起来（昨天没吃药）"
+  },
+  {
+    "id": 316,
+    "record_date": "2026-10-25",
+    "record_time": "22:42",
+    "systolic": 116,
+    "diastolic": 71,
+    "pulse": 69,
+    "note": ""
   }
 ]
