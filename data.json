@@ -2842,5 +2842,14 @@
     "diastolic": 74,
     "pulse": 70,
     "note": "刚躺下"
+  },
+  {
+    "id": 326,
+    "record_date": "2026-10-27",
+    "record_time": "04:25",
+    "systolic": 118,
+    "diastolic": 75,
+    "pulse": 67,
+    "note": "躺"
   }
 ]
