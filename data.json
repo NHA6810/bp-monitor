@@ -2824,5 +2824,14 @@
     "diastolic": 86,
     "pulse": 74,
     "note": "休息后"
+  },
+  {
+    "id": 324,
+    "record_date": "2026-10-26",
+    "record_time": "20:06",
+    "systolic": 114,
+    "diastolic": 83,
+    "pulse": 68,
+    "note": ""
   }
 ]
