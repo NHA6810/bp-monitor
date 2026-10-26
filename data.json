@@ -2815,5 +2815,14 @@
     "diastolic": 83,
     "pulse": 84,
     "note": "到家万和苑"
+  },
+  {
+    "id": 323,
+    "record_date": "2026-10-26",
+    "record_time": "18:23",
+    "systolic": 121,
+    "diastolic": 86,
+    "pulse": 74,
+    "note": ""
   }
 ]
