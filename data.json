@@ -2887,5 +2887,14 @@
     "diastolic": 72,
     "pulse": 73,
     "note": "户外锻炼好到家"
+  },
+  {
+    "id": 331,
+    "record_date": "2026-10-27",
+    "record_time": "22:49",
+    "systolic": 123,
+    "diastolic": 86,
+    "pulse": 70,
+    "note": "洗漱完毕"
   }
 ]
