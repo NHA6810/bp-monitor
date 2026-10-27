@@ -2905,5 +2905,14 @@
     "diastolic": 92,
     "pulse": 68,
     "note": "小便后躺"
+  },
+  {
+    "id": 333,
+    "record_date": "2026-10-28",
+    "record_time": "05:02",
+    "systolic": 132,
+    "diastolic": 92,
+    "pulse": 77,
+    "note": ""
   }
 ]
