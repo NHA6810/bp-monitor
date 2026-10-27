@@ -2896,5 +2896,14 @@
     "diastolic": 86,
     "pulse": 70,
     "note": "洗漱完毕"
+  },
+  {
+    "id": 332,
+    "record_date": "2026-10-28",
+    "record_time": "01:46",
+    "systolic": 136,
+    "diastolic": 92,
+    "pulse": 68,
+    "note": "小便后躺"
   }
 ]
