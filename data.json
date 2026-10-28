@@ -2923,5 +2923,14 @@
     "diastolic": 82,
     "pulse": 81,
     "note": "晨起空腹洗漱完毕"
+  },
+  {
+    "id": 335,
+    "record_date": "2026-10-28",
+    "record_time": "09:05",
+    "systolic": 119,
+    "diastolic": 79,
+    "pulse": 79,
+    "note": "办公室"
   }
 ]
