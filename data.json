@@ -2968,5 +2968,14 @@
     "diastolic": 79,
     "pulse": 66,
     "note": ""
+  },
+  {
+    "id": 340,
+    "record_date": "2026-10-29",
+    "record_time": "02:30",
+    "systolic": 130,
+    "diastolic": 89,
+    "pulse": 77,
+    "note": "小便后"
   }
 ]
