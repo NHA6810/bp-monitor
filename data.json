@@ -2959,5 +2959,14 @@
     "diastolic": 74,
     "pulse": 99,
     "note": "骑行运动后到家"
+  },
+  {
+    "id": 339,
+    "record_date": "2026-10-28",
+    "record_time": "23:06",
+    "systolic": 116,
+    "diastolic": 79,
+    "pulse": 66,
+    "note": ""
   }
 ]
