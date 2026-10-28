@@ -2932,5 +2932,14 @@
     "diastolic": 79,
     "pulse": 79,
     "note": "办公室"
+  },
+  {
+    "id": 336,
+    "record_date": "2026-10-28",
+    "record_time": "17:48",
+    "systolic": 137,
+    "diastolic": 96,
+    "pulse": 69,
+    "note": "回家休息30分钟以上"
   }
 ]
