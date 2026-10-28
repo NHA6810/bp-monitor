@@ -2941,5 +2941,14 @@
     "diastolic": 96,
     "pulse": 69,
     "note": "回家休息30分钟以上"
+  },
+  {
+    "id": 337,
+    "record_date": "2026-10-28",
+    "record_time": "17:49",
+    "systolic": 108,
+    "diastolic": 77,
+    "pulse": 81,
+    "note": "休息后起床"
   }
 ]
