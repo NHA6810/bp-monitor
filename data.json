@@ -2950,5 +2950,14 @@
     "diastolic": 77,
     "pulse": 81,
     "note": "休息后起床"
+  },
+  {
+    "id": 338,
+    "record_date": "2026-10-28",
+    "record_time": "21:51",
+    "systolic": 116,
+    "diastolic": 74,
+    "pulse": 99,
+    "note": "骑行运动后到家"
   }
 ]
