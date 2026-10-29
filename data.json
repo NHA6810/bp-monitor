@@ -2995,5 +2995,14 @@
     "diastolic": 82,
     "pulse": 81,
     "note": "小睡片刻后"
+  },
+  {
+    "id": 343,
+    "record_date": "2026-10-30",
+    "record_time": "03:37",
+    "systolic": 114,
+    "diastolic": 79,
+    "pulse": 73,
+    "note": ""
   }
 ]
