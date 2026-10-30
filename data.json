@@ -3004,5 +3004,14 @@
     "diastolic": 79,
     "pulse": 73,
     "note": "小便后躺着"
+  },
+  {
+    "id": 344,
+    "record_date": "2026-10-31",
+    "record_time": "03:43",
+    "systolic": 122,
+    "diastolic": 80,
+    "pulse": 67,
+    "note": ""
   }
 ]
