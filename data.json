@@ -3058,5 +3058,14 @@
     "diastolic": 88,
     "pulse": 65,
     "note": ""
+  },
+  {
+    "id": 350,
+    "record_date": "2026-11-03",
+    "record_time": "06:26",
+    "systolic": 133,
+    "diastolic": 91,
+    "pulse": 77,
+    "note": "晨起空腹洗漱完毕"
   }
 ]
