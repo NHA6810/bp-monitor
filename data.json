@@ -3031,5 +3031,14 @@
     "diastolic": 82,
     "pulse": 72,
     "note": "坐起"
+  },
+  {
+    "id": 347,
+    "record_date": "2026-11-02",
+    "record_time": "22:30",
+    "systolic": 120,
+    "diastolic": 77,
+    "pulse": 69,
+    "note": "洗好澡躺下"
   }
 ]
