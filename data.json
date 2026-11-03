@@ -3076,5 +3076,14 @@
     "diastolic": 81,
     "pulse": 78,
     "note": ""
+  },
+  {
+    "id": 352,
+    "record_date": "2026-11-03",
+    "record_time": "11:04",
+    "systolic": 122,
+    "diastolic": 86,
+    "pulse": 69,
+    "note": ""
   }
 ]
