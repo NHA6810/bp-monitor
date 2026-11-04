@@ -3121,5 +3121,14 @@
     "diastolic": 95,
     "pulse": 68,
     "note": ""
+  },
+  {
+    "id": 357,
+    "record_date": "2026-11-05",
+    "record_time": "06:10",
+    "systolic": 124,
+    "diastolic": 82,
+    "pulse": 65,
+    "note": "准备起床"
   }
 ]
