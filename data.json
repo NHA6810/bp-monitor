@@ -3112,5 +3112,14 @@
     "diastolic": 85,
     "pulse": 57,
     "note": "刚躺下"
+  },
+  {
+    "id": 356,
+    "record_date": "2026-11-05",
+    "record_time": "02:40",
+    "systolic": 130,
+    "diastolic": 95,
+    "pulse": 68,
+    "note": ""
   }
 ]
