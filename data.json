@@ -3139,5 +3139,14 @@
     "diastolic": 84,
     "pulse": 61,
     "note": ""
+  },
+  {
+    "id": 359,
+    "record_date": "2026-11-06",
+    "record_time": "06:09",
+    "systolic": 135,
+    "diastolic": 88,
+    "pulse": 67,
+    "note": ""
   }
 ]
