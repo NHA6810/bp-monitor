@@ -3175,5 +3175,23 @@
     "diastolic": 80,
     "pulse": 71,
     "note": "起床"
+  },
+  {
+    "id": 363,
+    "record_date": "2026-11-07",
+    "record_time": "18:49",
+    "systolic": 114,
+    "diastolic": 79,
+    "pulse": 79,
+    "note": ""
+  },
+  {
+    "id": 364,
+    "record_date": "2026-11-07",
+    "record_time": "23:08",
+    "systolic": 111,
+    "diastolic": 81,
+    "pulse": 85,
+    "note": ""
   }
 ]
