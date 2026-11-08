@@ -3202,5 +3202,14 @@
     "diastolic": 80,
     "pulse": 57,
     "note": ""
+  },
+  {
+    "id": 366,
+    "record_date": "2026-11-09",
+    "record_time": "06:08",
+    "systolic": 128,
+    "diastolic": 82,
+    "pulse": 68,
+    "note": "醒了躺位"
   }
 ]
