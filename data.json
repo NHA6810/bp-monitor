@@ -3247,5 +3247,14 @@
     "diastolic": 80,
     "pulse": 57,
     "note": ""
+  },
+  {
+    "id": 371,
+    "record_date": "2026-11-10",
+    "record_time": "02:24",
+    "systolic": 124,
+    "diastolic": 77,
+    "pulse": 57,
+    "note": ""
   }
 ]
