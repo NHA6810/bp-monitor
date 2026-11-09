@@ -3265,5 +3265,14 @@
     "diastolic": 91,
     "pulse": 64,
     "note": "准备起床"
+  },
+  {
+    "id": 373,
+    "record_date": "2026-11-10",
+    "record_time": "06:11",
+    "systolic": 124,
+    "diastolic": 82,
+    "pulse": 62,
+    "note": ""
   }
 ]
