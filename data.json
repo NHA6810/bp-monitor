@@ -3220,5 +3220,14 @@
     "diastolic": 88,
     "pulse": 75,
     "note": "回到家"
+  },
+  {
+    "id": 368,
+    "record_date": "2026-11-09",
+    "record_time": "18:39",
+    "systolic": 129,
+    "diastolic": 86,
+    "pulse": 75,
+    "note": ""
   }
 ]
