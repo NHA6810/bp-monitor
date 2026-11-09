@@ -3229,5 +3229,14 @@
     "diastolic": 86,
     "pulse": 75,
     "note": "饭后"
+  },
+  {
+    "id": 369,
+    "record_date": "2026-11-09",
+    "record_time": "21:10",
+    "systolic": 115,
+    "diastolic": 81,
+    "pulse": 82,
+    "note": "慢跑回来2.5km"
   }
 ]
