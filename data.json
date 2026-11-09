@@ -3238,5 +3238,14 @@
     "diastolic": 81,
     "pulse": 82,
     "note": "慢跑回来2.5km"
+  },
+  {
+    "id": 370,
+    "record_date": "2026-11-10",
+    "record_time": "01:23",
+    "systolic": 118,
+    "diastolic": 80,
+    "pulse": 57,
+    "note": ""
   }
 ]
