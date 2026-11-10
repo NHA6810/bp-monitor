@@ -3310,5 +3310,14 @@
     "diastolic": 76,
     "pulse": 65,
     "note": "起夜小便后"
+  },
+  {
+    "id": 378,
+    "record_date": "2026-11-11",
+    "record_time": "06:43",
+    "systolic": 130,
+    "diastolic": 90,
+    "pulse": 80,
+    "note": ""
   }
 ]
