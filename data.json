@@ -3292,5 +3292,14 @@
     "diastolic": 82,
     "pulse": 77,
     "note": "晚饭后运动前"
+  },
+  {
+    "id": 376,
+    "record_date": "2026-11-10",
+    "record_time": "22:24",
+    "systolic": 127,
+    "diastolic": 82,
+    "pulse": 74,
+    "note": ""
   }
 ]
