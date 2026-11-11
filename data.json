@@ -3319,5 +3319,14 @@
     "diastolic": 90,
     "pulse": 80,
     "note": ""
+  },
+  {
+    "id": 379,
+    "record_date": "2026-11-11",
+    "record_time": "18:09",
+    "systolic": 120,
+    "diastolic": 81,
+    "pulse": 81,
+    "note": "楼下走了一圈"
   }
 ]
