@@ -3373,5 +3373,14 @@
     "diastolic": 71,
     "pulse": 90,
     "note": "快步走回家5.18KM"
+  },
+  {
+    "id": 385,
+    "record_date": "2026-11-13",
+    "record_time": "01:39",
+    "systolic": 126,
+    "diastolic": 86,
+    "pulse": 59,
+    "note": ""
   }
 ]
