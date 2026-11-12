@@ -3382,5 +3382,14 @@
     "diastolic": 86,
     "pulse": 59,
     "note": ""
+  },
+  {
+    "id": 386,
+    "record_date": "2026-11-13",
+    "record_time": "06:02",
+    "systolic": 129,
+    "diastolic": 86,
+    "pulse": 72,
+    "note": "醒来躺"
   }
 ]
