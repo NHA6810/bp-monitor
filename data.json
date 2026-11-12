@@ -3364,5 +3364,14 @@
     "diastolic": 83,
     "pulse": 77,
     "note": "晚饭后"
+  },
+  {
+    "id": 384,
+    "record_date": "2026-11-12",
+    "record_time": "20:24",
+    "systolic": 112,
+    "diastolic": 71,
+    "pulse": 90,
+    "note": "快步走回家5.18KM"
   }
 ]
