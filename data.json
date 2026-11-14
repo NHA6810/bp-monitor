@@ -3436,5 +3436,14 @@
     "diastolic": 78,
     "pulse": 70,
     "note": "起床坐位"
+  },
+  {
+    "id": 392,
+    "record_date": "2026-11-15",
+    "record_time": "06:00",
+    "systolic": 127,
+    "diastolic": 88,
+    "pulse": 64,
+    "note": "醒来躺位"
   }
 ]
