@@ -3454,5 +3454,14 @@
     "diastolic": 72,
     "pulse": 71,
     "note": "洗好澡准备睡"
+  },
+  {
+    "id": 394,
+    "record_date": "2026-11-16",
+    "record_time": "04:13",
+    "systolic": 120,
+    "diastolic": 82,
+    "pulse": 61,
+    "note": ""
   }
 ]
