@@ -3490,5 +3490,14 @@
     "diastolic": 89,
     "pulse": 92,
     "note": "小憩15分钟起来"
+  },
+  {
+    "id": 398,
+    "record_date": "2026-11-17",
+    "record_time": "00:08",
+    "systolic": 125,
+    "diastolic": 85,
+    "pulse": 59,
+    "note": ""
   }
 ]
