@@ -3472,5 +3472,23 @@
     "diastolic": 83,
     "pulse": 86,
     "note": "晨起空腹洗漱完毕"
+  },
+  {
+    "id": 396,
+    "record_date": "2026-11-16",
+    "record_time": "18:45",
+    "systolic": 126,
+    "diastolic": 74,
+    "pulse": 99,
+    "note": "健身超后"
+  },
+  {
+    "id": 397,
+    "record_date": "2026-11-16",
+    "record_time": "19:33",
+    "systolic": 125,
+    "diastolic": 89,
+    "pulse": 92,
+    "note": "小憩15分钟起来"
   }
 ]
