@@ -3517,5 +3517,14 @@
     "diastolic": 81,
     "pulse": 80,
     "note": "空腹洗漱完毕"
+  },
+  {
+    "id": 401,
+    "record_date": "2026-11-17",
+    "record_time": "11:30",
+    "systolic": 130,
+    "diastolic": 89,
+    "pulse": 87,
+    "note": "办公室。忙碌"
   }
 ]
