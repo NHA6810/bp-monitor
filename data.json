@@ -3571,5 +3571,14 @@
     "diastolic": 82,
     "pulse": 63,
     "note": ""
+  },
+  {
+    "id": 407,
+    "record_date": "2026-11-18",
+    "record_time": "06:25",
+    "systolic": 129,
+    "diastolic": 82,
+    "pulse": 79,
+    "note": "晨起空腹洗漱完毕"
   }
 ]
