@@ -3526,5 +3526,14 @@
     "diastolic": 89,
     "pulse": 87,
     "note": "办公室。忙碌"
+  },
+  {
+    "id": 402,
+    "record_date": "2026-11-17",
+    "record_time": "16:32",
+    "systolic": 128,
+    "diastolic": 83,
+    "pulse": 76,
+    "note": "刚到家上五楼"
   }
 ]
