@@ -3634,5 +3634,14 @@
     "diastolic": 82,
     "pulse": 54,
     "note": ""
+  },
+  {
+    "id": 414,
+    "record_date": "2026-11-20",
+    "record_time": "06:14",
+    "systolic": 136,
+    "diastolic": 92,
+    "pulse": 64,
+    "note": "准备起床"
   }
 ]
