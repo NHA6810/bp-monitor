@@ -3616,5 +3616,14 @@
     "diastolic": 87,
     "pulse": 80,
     "note": "电脑前工作"
+  },
+  {
+    "id": 412,
+    "record_date": "2026-11-19",
+    "record_time": "21:33",
+    "systolic": 123,
+    "diastolic": 81,
+    "pulse": 71,
+    "note": "洗澡前"
   }
 ]
