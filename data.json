@@ -3607,5 +3607,14 @@
     "diastolic": 83,
     "pulse": 59,
     "note": "准备起床"
+  },
+  {
+    "id": 411,
+    "record_date": "2026-11-19",
+    "record_time": "20:02",
+    "systolic": 131,
+    "diastolic": 87,
+    "pulse": 80,
+    "note": "电脑前工作"
   }
 ]
