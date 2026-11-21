@@ -3652,5 +3652,14 @@
     "diastolic": 86,
     "pulse": 82,
     "note": "晨起咖啡一杯后"
+  },
+  {
+    "id": 416,
+    "record_date": "2026-11-22",
+    "record_time": "02:40",
+    "systolic": 129,
+    "diastolic": 86,
+    "pulse": 66,
+    "note": ""
   }
 ]
