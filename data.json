@@ -3661,5 +3661,14 @@
     "diastolic": 86,
     "pulse": 66,
     "note": ""
+  },
+  {
+    "id": 417,
+    "record_date": "2026-11-23",
+    "record_time": "00:13",
+    "systolic": 118,
+    "diastolic": 69,
+    "pulse": 72,
+    "note": "洗好澡躺下"
   }
 ]
