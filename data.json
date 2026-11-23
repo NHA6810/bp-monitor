@@ -3706,5 +3706,14 @@
     "diastolic": 90,
     "pulse": 74,
     "note": "晚饭后"
+  },
+  {
+    "id": 422,
+    "record_date": "2026-11-23",
+    "record_time": "23:07",
+    "systolic": 120,
+    "diastolic": 75,
+    "pulse": 64,
+    "note": "刚上床睡觉觉躺下"
   }
 ]
