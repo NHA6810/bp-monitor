@@ -3724,5 +3724,14 @@
     "diastolic": 78,
     "pulse": 64,
     "note": ""
+  },
+  {
+    "id": 424,
+    "record_date": "2026-11-24",
+    "record_time": "06:35",
+    "systolic": 118,
+    "diastolic": 79,
+    "pulse": 88,
+    "note": "洗漱完毕，空腹运动后"
   }
 ]
