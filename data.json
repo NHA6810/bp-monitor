@@ -3715,5 +3715,14 @@
     "diastolic": 75,
     "pulse": 64,
     "note": "刚上床睡觉觉躺下"
+  },
+  {
+    "id": 423,
+    "record_date": "2026-11-24",
+    "record_time": "00:55",
+    "systolic": 124,
+    "diastolic": 78,
+    "pulse": 64,
+    "note": ""
   }
 ]
