@@ -3697,5 +3697,14 @@
     "diastolic": 84,
     "pulse": 86,
     "note": ""
+  },
+  {
+    "id": 421,
+    "record_date": "2026-11-23",
+    "record_time": "19:14",
+    "systolic": 135,
+    "diastolic": 90,
+    "pulse": 74,
+    "note": "晚饭后"
   }
 ]
