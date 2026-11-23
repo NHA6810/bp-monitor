@@ -3688,5 +3688,14 @@
     "diastolic": 81,
     "pulse": 78,
     "note": "洗漱完毕后"
+  },
+  {
+    "id": 420,
+    "record_date": "2026-11-23",
+    "record_time": "17:44",
+    "systolic": 121,
+    "diastolic": 84,
+    "pulse": 86,
+    "note": ""
   }
 ]
