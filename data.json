@@ -3814,5 +3814,14 @@
     "diastolic": 74,
     "pulse": 73,
     "note": "准备睡觉"
+  },
+  {
+    "id": 434,
+    "record_date": "2026-11-27",
+    "record_time": "01:29",
+    "systolic": 121,
+    "diastolic": 83,
+    "pulse": 58,
+    "note": ""
   }
 ]
