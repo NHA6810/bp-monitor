@@ -3796,5 +3796,14 @@
     "diastolic": 85,
     "pulse": 62,
     "note": ""
+  },
+  {
+    "id": 432,
+    "record_date": "2026-11-26",
+    "record_time": "18:34",
+    "systolic": 120,
+    "diastolic": 80,
+    "pulse": 81,
+    "note": "饭后"
   }
 ]
