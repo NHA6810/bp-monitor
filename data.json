@@ -3805,5 +3805,14 @@
     "diastolic": 80,
     "pulse": 81,
     "note": "饭后"
+  },
+  {
+    "id": 433,
+    "record_date": "2026-11-26",
+    "record_time": "22:43",
+    "systolic": 123,
+    "diastolic": 74,
+    "pulse": 73,
+    "note": "准备睡觉"
   }
 ]
