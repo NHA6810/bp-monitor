@@ -3823,5 +3823,23 @@
     "diastolic": 83,
     "pulse": 58,
     "note": ""
+  },
+  {
+    "id": 435,
+    "record_date": "2026-11-27",
+    "record_time": "06:15",
+    "systolic": 120,
+    "diastolic": 86,
+    "pulse": 71,
+    "note": "准备起床"
+  },
+  {
+    "id": 436,
+    "record_date": "2026-11-27",
+    "record_time": "16:43",
+    "systolic": 121,
+    "diastolic": 80,
+    "pulse": 81,
+    "note": "刚刚到达新城车站"
   }
 ]
