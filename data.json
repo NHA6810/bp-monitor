@@ -3841,5 +3841,23 @@
     "diastolic": 80,
     "pulse": 81,
     "note": "刚刚开车到达新城车站"
+  },
+  {
+    "id": 437,
+    "record_date": "2026-11-28",
+    "record_time": "00:12",
+    "systolic": 124,
+    "diastolic": 85,
+    "pulse": 75,
+    "note": "睡前坐着"
+  },
+  {
+    "id": 438,
+    "record_date": "2026-11-28",
+    "record_time": "05:15",
+    "systolic": 134,
+    "diastolic": 84,
+    "pulse": 70,
+    "note": ""
   }
 ]
